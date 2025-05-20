@@ -1,44 +1,35 @@
 # PowerShell画像ダウンロードスクリプト
 
-# 画像ダウンロード用関数
-function Download-Image {
-    param (
-        [string]$Url,
-        [string]$OutputPath
-    )
-    
-    try {
-        Invoke-WebRequest -Uri $Url -OutFile $OutputPath
-        Write-Host "画像をダウンロードしました: $OutputPath" -ForegroundColor Green
-    }
-    catch {
-        Write-Host "エラー: $($_.Exception.Message)" -ForegroundColor Red
-    }
-}
+# Create images directory if it doesn't exist
+New-Item -Path ".\images" -ItemType Directory -Force
 
-# ダウンロード先のディレクトリを確認
-if (-not (Test-Path -Path ".\images")) {
-    New-Item -Path ".\images" -ItemType Directory
-    Write-Host "imagesディレクトリを作成しました。" -ForegroundColor Yellow
-}
+# Download images using WebClient
+$webClient = New-Object System.Net.WebClient
 
-# サンプル画像をダウンロード
-Write-Host "サンプル画像のダウンロードを開始します..." -ForegroundColor Cyan
-
-# 商品画像のサンプル
-$ironUrls = @(
-    "https://images.unsplash.com/photo-1581686604777-8e48eb5e2e51?q=80&w=1000&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1597325750908-8c0e09fc0fd6?q=80&w=1000&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1581687625563-de5ed235d542?q=80&w=1000&auto=format&fit=crop"
+# Sample iron images from a reliable source
+$urls = @(
+    "https://cdn.pixabay.com/photo/2017/08/01/09/04/iron-gate-2563634_1280.jpg",
+    "https://cdn.pixabay.com/photo/2018/03/21/06/30/iron-work-3245169_1280.jpg",
+    "https://cdn.pixabay.com/photo/2016/11/19/15/03/iron-gate-1839733_1280.jpg",
+    "https://cdn.pixabay.com/photo/2017/08/07/12/35/iron-gate-2603500_1280.jpg"
 )
 
-for ($i = 0; $i -lt $ironUrls.Count; $i++) {
-    $index = $i + 1
-    Download-Image -Url $ironUrls[$i] -OutputPath ".\images\iron$index.jpg"
+try {
+    # Download product images
+    $webClient.DownloadFile($urls[0], ".\images\iron1.jpg")
+    Write-Host "Downloaded iron1.jpg" -ForegroundColor Green
+    
+    $webClient.DownloadFile($urls[1], ".\images\iron2.jpg")
+    Write-Host "Downloaded iron2.jpg" -ForegroundColor Green
+    
+    $webClient.DownloadFile($urls[2], ".\images\iron3.jpg")
+    Write-Host "Downloaded iron3.jpg" -ForegroundColor Green
+    
+    $webClient.DownloadFile($urls[3], ".\images\hero.jpg")
+    Write-Host "Downloaded hero.jpg" -ForegroundColor Green
+    
+    Write-Host "`nAll images downloaded successfully!" -ForegroundColor Cyan
 }
-
-# ヒーロー画像
-Download-Image -Url "https://images.unsplash.com/photo-1638599925594-a84e73718727?q=80&w=1024&auto=format&fit=crop" -OutputPath ".\images\hero.jpg"
-
-Write-Host "ダウンロード完了！" -ForegroundColor Cyan
-Write-Host "注意: これらはUnsplashからのサンプル画像です。商用利用には適切な権利確認をしてください。" -ForegroundColor Yellow 
+catch {
+    Write-Host "Error downloading images: $($_.Exception.Message)" -ForegroundColor Red
+} 
