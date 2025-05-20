@@ -138,6 +138,27 @@ body {
     color: #666;
 }
 
+.product-features {
+    list-style: none;
+    padding: 0 1rem;
+    margin: 1rem 0;
+}
+
+.product-features li {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.product-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
 .price {
     font-weight: bold;
     color: #333;
