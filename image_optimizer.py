@@ -20,15 +20,12 @@ def optimize_image(input_path, output_path=None, max_size=(2560, 1440), quality=
         original_width, original_height = img.size
         original_size = os.path.getsize(input_path) / 1024  # サイズをKBで取得
         
-        # アスペクト比を維持しながらリサイズ
+        # アスペクト比を維持しながらリサイズ（縮小のみ）
         ratio = min(max_size[0] / original_width, max_size[1] / original_height)
         if ratio < 1:
             new_size = (int(original_width * ratio), int(original_height * ratio))
             img = img.resize(new_size, Image.Resampling.LANCZOS)
-        elif ratio > 1:
-            # 元の画像が小さすぎる場合は拡大
-            new_size = (int(original_width * ratio), int(original_height * ratio))
-            img = img.resize(new_size, Image.Resampling.LANCZOS)
+        # 小さい画像は拡大せず、元のサイズを保持
         
         # 画像を保存（最適化）
         img.save(output_path, 'JPEG', quality=quality, optimize=True)
