@@ -1,16 +1,18 @@
 import '@testing-library/jest-dom';
+import { vi } from 'vitest';
 
 // Mock Next.js modules
 vi.mock('next/image', () => ({
-  default: ({ src, alt, ...props }: any) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={src} alt={alt} {...props} />;
+  default: (props: any) => {
+    const { src, alt, ...rest } = props;
+    return { type: 'img', props: { src, alt, ...rest } };
   },
 }));
 
 vi.mock('next/link', () => ({
-  default: ({ children, href, ...props }: any) => {
-    return <a href={href} {...props}>{children}</a>;
+  default: (props: any) => {
+    const { children, href, ...rest } = props;
+    return { type: 'a', props: { href, ...rest, children } };
   },
 }));
 

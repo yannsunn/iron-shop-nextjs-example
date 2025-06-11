@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
 import useMousePosition from '@/hooks/useMousePosition'
 import Button from '@/components/ui/Button'
+import NeuroOptimizer from '@/components/NeuroOptimizer'
 
 const Hero = () => {
   const [sectionRef, isVisible] = useIntersectionObserver({ 
@@ -23,11 +24,12 @@ const Hero = () => {
 
 
   return (
-    <section 
-      ref={sectionRef}
-      id="home" 
-      className="relative h-screen flex items-center justify-center text-white overflow-hidden"
-    >
+    <NeuroOptimizer section="hero" priority="high" className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+      <section 
+        ref={sectionRef}
+        id="home" 
+        className="w-full h-full relative"
+      >
       {/* Enhanced background with parallax effect */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -116,6 +118,7 @@ const Hero = () => {
                   </svg>
                 }
                 className="tracking-wide shadow-glow-hover transform transition-all duration-300 hover:scale-105 active:scale-95"
+                data-neuro-attention
               >
                 <span className="relative z-10">作品を見る</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -139,7 +142,8 @@ const Hero = () => {
         </div>
 
       </div>
-    </section>
+      </section>
+    </NeuroOptimizer>
   )
 }
 

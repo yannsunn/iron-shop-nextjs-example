@@ -51,6 +51,52 @@
   }
 }
 
+@keyframes neuro-attention-grab {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.02) rotate(0.5deg); }
+  50% { transform: scale(1.04) rotate(0deg); }
+  75% { transform: scale(1.02) rotate(-0.5deg); }
+}
+
+@keyframes neuro-exit-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
+    transform: scale(1.02);
+  }
+}
+
+/* ニューロ最適化クラス */
+.neuro-optimized-section {
+  transition: all 0.3s ease;
+}
+
+.neuro-simplified {
+  filter: brightness(1.1) contrast(0.9);
+}
+
+.neuro-enhanced {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.neuro-exit-optimization {
+  animation: neuro-exit-pulse 2s infinite;
+  position: relative;
+  z-index: 10;
+}
+
+[data-neuro-attention] {
+  transition: all 0.3s ease;
+}
+
+[data-neuro-attention].animate-pulse {
+  animation: neuro-attention-grab 3s ease-in-out;
+}
+
 @keyframes attention-grab {
   0%, 100% { transform: translateY(0) scale(1); }
   25% { transform: translateY(-2px) scale(1.02); }
