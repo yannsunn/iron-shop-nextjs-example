@@ -101,8 +101,7 @@ const GalleryItem = React.memo<GalleryItemProps>(({
       <div 
         className={cn(
           'absolute -inset-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl blur-xl',
-          'bg-blue-500/20',
-          isHovered && 'animate-pulse-glow'
+          'bg-blue-500/20'
         )} 
       />
       
@@ -191,28 +190,6 @@ const Gallery = () => {
     }
   }, [])
 
-  // Memoized background elements to prevent unnecessary re-renders
-  const backgroundElements = useMemo(() => (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div 
-        className="absolute w-96 h-96 bg-blue-100/20 rounded-full blur-3xl animate-pulse"
-        style={{
-          transform: `translate(${mousePosition.elementX * 0.02}px, ${mousePosition.elementY * 0.02}px)`,
-          left: '10%',
-          top: '20%',
-        }}
-      />
-      <div 
-        className="absolute w-80 h-80 bg-amber-100/20 rounded-full blur-3xl animate-pulse"
-        style={{
-          transform: `translate(${mousePosition.elementX * -0.01}px, ${mousePosition.elementY * -0.01}px)`,
-          right: '10%',
-          bottom: '20%',
-          animationDelay: '1s'
-        }}
-      />
-    </div>
-  ), [mousePosition.elementX, mousePosition.elementY])
 
   return (
     <section 
@@ -220,8 +197,6 @@ const Gallery = () => {
       id="gallery" 
       className="relative py-32 overflow-hidden bg-slate-50"
     >
-      {/* Memoized animated background elements */}
-      {backgroundElements}
 
       <div className="container-custom relative z-10">
         <div className={cn(

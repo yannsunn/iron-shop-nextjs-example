@@ -21,28 +21,6 @@ const Hero = () => {
     }
   }, [])
 
-  // Memoized background elements for performance
-  const backgroundElements = useMemo(() => (
-    <div className="absolute inset-0 z-5 pointer-events-none overflow-hidden">
-      <div 
-        className="absolute w-96 h-96 bg-blue-900/10 rounded-full blur-3xl animate-pulse"
-        style={{
-          transform: `translate(${mousePosition.elementX * 0.03}px, ${mousePosition.elementY * 0.03}px)`,
-          left: '20%',
-          top: '10%',
-        }}
-      />
-      <div 
-        className="absolute w-80 h-80 bg-amber-700/10 rounded-full blur-3xl animate-pulse"
-        style={{
-          transform: `translate(${mousePosition.elementX * -0.02}px, ${mousePosition.elementY * -0.02}px)`,
-          right: '20%',
-          bottom: '10%',
-          animationDelay: '2s'
-        }}
-      />
-    </div>
-  ), [mousePosition.elementX, mousePosition.elementY])
 
   return (
     <section 
@@ -69,8 +47,6 @@ const Hero = () => {
         />
       </div>
 
-      {/* Memoized animated background elements */}
-      {backgroundElements}
 
       {/* Enhanced overlays */}
       <div className="absolute inset-0 z-10">
@@ -86,10 +62,6 @@ const Hero = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         )}>
           
-          {/* Floating badge */}
-          <div className="inline-block mb-6 px-6 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium animate-float">
-            ✨ Professional Iron Craftsmanship
-          </div>
 
           {/* Main heading with clean text */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight text-white">
@@ -132,12 +104,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </div>
     </section>
   )
