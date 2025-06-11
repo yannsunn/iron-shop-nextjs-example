@@ -28,3 +28,15 @@ export function validateEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return emailRegex.test(email)
 }
+
+export function formatPrice(price: number): string {
+  return new Intl.NumberFormat('ja-JP', {
+    style: 'currency',
+    currency: 'JPY',
+  }).format(price)
+}
+
+export function truncateText(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text
+  return text.slice(0, maxLength) + '...'
+}

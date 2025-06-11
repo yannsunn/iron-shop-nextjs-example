@@ -1,0 +1,32 @@
+# ZAP Security Scan Rules Configuration
+# Format: Rule ID	PASS|FAIL|IGNORE	Comments
+
+# Content Security Policy
+10038	FAIL	CSP headers should be properly configured
+
+# X-Frame-Options
+10020	FAIL	X-Frame-Options header should be present
+
+# X-Content-Type-Options
+10021	FAIL	X-Content-Type-Options header should be present
+
+# Strict Transport Security
+10035	FAIL	HSTS header should be present for HTTPS sites
+
+# Information Disclosure
+10024	IGNORE	Server version information disclosure (acceptable for static sites)
+
+# Cross-Domain Misconfiguration
+10098	FAIL	Cross-domain policy should be secure
+
+# Application Error Disclosure
+90022	FAIL	Application errors should not be exposed
+
+# SQL Injection
+40018	FAIL	SQL injection vulnerabilities
+
+# Cross-Site Scripting
+40012	FAIL	XSS vulnerabilities should be prevented
+
+# Path Traversal
+6	FAIL	Path traversal vulnerabilities

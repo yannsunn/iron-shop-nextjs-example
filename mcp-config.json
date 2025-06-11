@@ -2,16 +2,16 @@
   "mcpServers": {
     "GitHub MCP": {
       "type": "command",
-      "command": "npx -y @modelcontextprotocol/server-github",
+      "command": "mcp-server-github",
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE"
       }
     },
     "Notion MCP": {
       "type": "command",
       "command": "mcp-notion-server",
       "env": {
-        "NOTION_API_TOKEN": "${NOTION_API_TOKEN}"
+        "NOTION_API_TOKEN": "YOUR_NOTION_TOKEN_HERE"
       }
     },
     "Sequential Thinking MCP": {
@@ -28,7 +28,7 @@
       "type": "command",
       "command": "npx -y vercel-mcp-server",
       "env": {
-        "VERCEL_ACCESS_TOKEN": "${VERCEL_ACCESS_TOKEN}"
+        "VERCEL_ACCESS_TOKEN": "YOUR_VERCEL_TOKEN_HERE"
       }
     }
   }
