@@ -1,14 +1,7 @@
 {
   "version": 2,
-  "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "installCommand": "npm install --legacy-peer-deps",
   "regions": ["hnd1"],
-  "functions": {
-    "pages/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
+  "framework": "nextjs",
   "headers": [
     {
       "source": "/(.*)",
@@ -18,7 +11,7 @@
           "value": "DENY"
         },
         {
-          "key": "X-XSS-Protection",
+          "key": "X-XSS-Protection", 
           "value": "1; mode=block"
         },
         {
