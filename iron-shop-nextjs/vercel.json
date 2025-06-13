@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm install --legacy-peer-deps && npm run build",
-  "installCommand": "npm install --legacy-peer-deps",
-  "regions": ["hnd1"],
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "installCommand": "echo 'Installing dependencies...' && npm install --legacy-peer-deps",
+  "buildCommand": "echo 'Starting build process...' && npm run build",
+  "outputDirectory": ".next"
 }

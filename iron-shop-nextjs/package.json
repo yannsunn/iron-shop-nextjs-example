@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && echo 'Build completed' && ls -la .next/",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
@@ -31,7 +31,7 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^15.3.3",
+    "@next/bundle-analyzer": "^14.2.5",
     "@sentry/nextjs": "^8.44.0",
     "@size-limit/preset-app": "^11.1.6",
     "@testing-library/jest-dom": "^6.6.3",
