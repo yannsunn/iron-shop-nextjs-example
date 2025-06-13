@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Building in iron-shop-nextjs directory' && cd iron-shop-nextjs && pwd && npm install --legacy-peer-deps && npm run build && ls -la .next/",
+    "build": "cd iron-shop-nextjs && npm install --legacy-peer-deps && npm run build",
     "dev": "cd iron-shop-nextjs && npm run dev", 
     "start": "cd iron-shop-nextjs && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   description: '職人の技が光る、こだわりのアイアン製品をお届けします。アンティーク調からモダンまで、幅広いデザインをご提供。',
   keywords: 'アイアン,鉄製品,インテリア,家具,アンティーク,インダストリアル,鉄工所,オーダーメイド',
   authors: [{ name: 'アイアンショップ' }],
-  viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     title: 'アイアンショップ - 高品質なアイアン製品',
     description: '職人の技が光る、こだわりのアイアン製品をお届けします。',
@@ -30,6 +29,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 import { AppProvider } from '@/context/AppContext'
