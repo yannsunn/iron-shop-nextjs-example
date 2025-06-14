@@ -4,7 +4,6 @@ import Image from 'next/image'
 import React, { useState, useMemo, useCallback } from 'react'
 import { cn } from '@/lib/utils'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
-import useMousePosition from '@/hooks/useMousePosition'
 import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
 
@@ -201,7 +200,6 @@ const GalleryItem = React.memo<GalleryItemProps>(({
 const Gallery = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.1, freezeOnceVisible: true })
-  const mousePosition = useMousePosition(sectionRef)
 
   // Memoized handlers for performance
   const handleItemHover = useCallback((id: string | null) => {

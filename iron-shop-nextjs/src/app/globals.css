@@ -86,7 +86,6 @@
 .neuro-exit-optimization {
   animation: neuro-exit-pulse 2s infinite;
   position: relative;
-  z-index: 10;
 }
 
 [data-neuro-attention] {
