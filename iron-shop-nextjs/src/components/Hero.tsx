@@ -24,7 +24,7 @@ const Hero = () => {
 
 
   return (
-    <NeuroOptimizer section="hero" priority="high" className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+    <NeuroOptimizer section="hero" priority="high" className="relative h-screen flex items-center justify-center text-white overflow-hidden pt-20">
       <section 
         ref={sectionRef}
         id="home" 

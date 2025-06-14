@@ -220,7 +220,7 @@ const Gallery = () => {
     <section 
       ref={sectionRef}
       id="gallery" 
-      className="relative py-32 overflow-hidden bg-slate-50"
+      className="relative pt-32 pb-32 overflow-hidden bg-slate-50"
     >
 
       <div className="container-custom relative z-10">

@@ -5,9 +5,15 @@ import { cn } from '@/lib/utils'
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState('')
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
+      // Handle scroll state
+      setIsScrolled(window.scrollY > 50)
+      
+      // Handle active section
       const sections = ['home', 'gallery', 'about', 'contact']
       const current = sections.find(section => {
         const element = document.getElementById(section)
@@ -30,17 +36,6 @@ const Header = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
-
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -72,7 +67,7 @@ const Header = () => {
   return (
     <>
       <header className={cn(
-        'fixed w-full top-0 z-50 transition-all duration-300',
+        'fixed w-full top-0 z-[100] transition-all duration-300',
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200' 
           : 'bg-transparent'
@@ -143,7 +138,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       <div className={cn(
-        'lg:hidden fixed inset-0 z-40 transition-all duration-300',
+        'lg:hidden fixed inset-0 z-[90] transition-all duration-300',
         isMobileMenuOpen ? 'bg-black/50 backdrop-blur-sm' : 'bg-black/0 backdrop-blur-0 pointer-events-none'
       )}>
         <div className={cn(
