@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(npm run lint)",
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(rm:*)",
+      "Bash(npx next-bundle-analyzer:*)",
+      "Bash(killall:*)",
+      "Bash(true)",
+      "Bash(for size in 72 96 128 144 152 384 512)",
+      "Bash(do cp icon-192x192.png icon-$sizex$size.png)",
+      "Bash(done)",
+      "Bash(npm run clean:*)",
+      "Bash(mv:*)",
+      "Bash(npx next:*)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(cat:*)",
+      "Bash(git commit:*)",
+      "Bash(npm install)",
+      "WebFetch(domain:iron-shop-nextjs.vercel.app)",
+      "Bash(vercel:*)",
+      "Bash(bash -c:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(exec bash -c \"cd /mnt/c/Users/march/Aian/Aian && git status\")",
+      "Bash(bash)",
+      "Bash(chmod:*)",
+      "Bash(./deploy.sh)",
+      "Bash(sh:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(exec /bin/bash -c \"cd /mnt/c/Users/march/Aian/Aian && git status\")",
+      "Bash(cmd.exe /c \"git-push.bat\")",
+      "Bash(powershell.exe:*)",
+      "Bash(wsl.exe --exec bash -c \"cd /mnt/c/Users/march/Aian/Aian && git add . && git commit -m 'Deploy ready' && git push origin main\")"
+    ],
+    "deny": []
+  }
+}

@@ -1,46 +1,69 @@
-# アイアン販売ウェブサイト
+# Iron Shop - Premium Iron Products Website
 
-このプロジェクトは、アイアン製品を販売するためのシンプルなウェブサイトです。
+高品質アイアン製品のモダンなNext.jsウェブサイト
 
-## 機能
+## 🚀 Quick Start
 
-- レスポンシブデザイン
-- 商品一覧表示
-- お問い合わせフォーム
-- 会社概要セクション
-
-## ファイル構成
-
-- `index.html` - メインのHTMLファイル
-- `styles.css` - スタイルシート
-- `README.md` - プロジェクトの説明
-
-## 使用方法
-
-1. リポジトリをクローンまたはダウンロードします
-2. `index.html`をウェブブラウザで開きます
-
-## カスタマイズ方法
-
-### 商品の追加・編集
-
-`index.html`の商品セクション内の`product-card`クラスを持つ`div`要素をコピーして、新しい商品を追加できます。
-
-```html
-<div class="product-card">
-    <img src="商品画像のURL" alt="商品名">
-    <h3>商品名</h3>
-    <p>商品説明</p>
-    <p class="price">価格</p>
-    <button class="buy-button">購入する</button>
-</div>
+```bash
+npm install
+npm run dev
 ```
 
-### スタイルの変更
+Visit http://localhost:3000
 
-`styles.css`を編集することで、ウェブサイトのデザインをカスタマイズできます。
+## 📁 Project Structure
 
-## 注意事項
+```
+├── src/
+│   ├── app/           # Next.js 14 App Router
+│   │   ├── page.tsx   # Homepage
+│   │   └── layout.tsx # Root layout
+│   ├── components/    # React components
+│   │   ├── Hero.tsx   # Optimized hero section
+│   │   ├── Gallery.tsx
+│   │   ├── About.tsx
+│   │   └── Contact.tsx
+│   ├── hooks/         # Custom React hooks
+│   └── lib/           # Utilities
+├── public/            # Static assets
+│   └── images/        # Product images
+└── vercel.json        # Deployment config
+```
 
-- 画像は`https://via.placeholder.com`のプレースホルダーを使用しています。実際の商品画像に置き換えてください。
-- お問い合わせフォームの機能は実装されていません。必要に応じてバックエンド処理を追加してください。 
+## 🛠 Features
+
+- ✅ **Optimized Hero Section** - Clean, readable design
+- ✅ **Responsive Design** - Works on all devices
+- ✅ **Performance Optimized** - Fast loading times
+- ✅ **SEO Ready** - Search engine optimized
+- ✅ **Production Ready** - Vercel deployment configured
+
+## 🎨 Recent Improvements
+
+- Simplified hero section for better readability
+- Removed complex gradients and overlays
+- Cleaned project structure
+- Optimized text visibility
+- Removed duplicate files
+
+## 🌐 Deployment
+
+Auto-deploys to Vercel from main branch.
+
+- **Framework**: Next.js 14.2.5
+- **Deployment**: Vercel
+- **Repository**: https://github.com/yannsunn/Aian
+
+## 📜 Scripts
+
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run start    # Production server
+npm run lint     # ESLint check
+npm run deploy   # Git push to main
+```
+
+---
+
+🤖 **Built with Next.js 14 | Deployed on Vercel** 
