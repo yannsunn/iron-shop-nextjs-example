@@ -70,7 +70,7 @@ const Header = () => {
         'fixed w-full top-0 z-[100] transition-all duration-300',
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200' 
-          : 'bg-black/20 backdrop-blur-sm'
+          : 'bg-black/40 backdrop-blur-md shadow-sm'
       )}>
         <nav className="container-custom flex justify-between items-center py-4">
           {/* Logo */}

@@ -24,7 +24,7 @@ const Hero = () => {
 
 
   return (
-    <NeuroOptimizer section="hero" priority="high" className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+    <NeuroOptimizer section="hero" priority="high" className="relative h-screen flex flex-col justify-center text-white overflow-hidden pt-20">
       <section 
         ref={sectionRef}
         id="home" 
@@ -58,7 +58,7 @@ const Hero = () => {
       </div>
       
       {/* Main content with enhanced animations */}
-      <div className="relative z-20 text-center max-w-6xl px-6 mt-24 md:mt-20 lg:mt-16">
+      <div className="relative z-20 text-center max-w-6xl px-6 mx-auto">
         <div className={cn(
           'transition-all duration-1000',
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
