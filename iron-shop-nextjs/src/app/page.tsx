@@ -6,18 +6,16 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import StructuredData from '@/components/StructuredData'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <StructuredData />
-      <main className="min-h-screen">
-        <Header />
-        <Hero />
-        <Gallery />
-        <About />
-        <Contact />
-        <Footer />
-      </main>
+      <Header />
+      <Hero />
+      <Gallery />
+      <About />
+      <Contact />
+      <Footer />
     </>
   )
 }

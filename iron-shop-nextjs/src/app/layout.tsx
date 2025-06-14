@@ -53,7 +53,9 @@ export default function RootLayout({
       </head>
       <body className="font-sans leading-relaxed text-gray-800 antialiased">
         <AppProvider>
-          {children}
+          <main className="min-h-screen">
+            {children}
+          </main>
         </AppProvider>
       </body>
     </html>
