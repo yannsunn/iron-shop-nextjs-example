@@ -285,4 +285,6 @@ const Gallery = () => {
   )
 }
 
+Gallery.displayName = 'Gallery'
+
 export default Gallery
