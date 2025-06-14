@@ -1,7 +1,4 @@
 {
   "version": 2,
-  "framework": "nextjs",
-  "installCommand": "echo 'Installing dependencies...' && npm install --legacy-peer-deps",
-  "buildCommand": "echo 'Starting build process...' && npm run build",
-  "outputDirectory": ".next"
+  "installCommand": "npm install --legacy-peer-deps"
 }
