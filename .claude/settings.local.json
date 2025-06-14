@@ -36,7 +36,8 @@
       "Bash(exec /bin/bash -c \"cd /mnt/c/Users/march/Aian/Aian && git status\")",
       "Bash(cmd.exe /c \"git-push.bat\")",
       "Bash(powershell.exe:*)",
-      "Bash(wsl.exe --exec bash -c \"cd /mnt/c/Users/march/Aian/Aian && git add . && git commit -m 'Deploy ready' && git push origin main\")"
+      "Bash(wsl.exe --exec bash -c \"cd /mnt/c/Users/march/Aian/Aian && git add . && git commit -m 'Deploy ready' && git push origin main\")",
+      "WebFetch(domain:www.slazzer.com)"
     ],
     "deny": []
   }
