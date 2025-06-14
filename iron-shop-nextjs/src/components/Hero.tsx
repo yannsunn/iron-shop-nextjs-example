@@ -38,7 +38,7 @@ const Hero = () => {
           fill
           className="object-cover transform scale-110 transition-transform duration-700"
           style={{ 
-            filter: 'brightness(0.3) contrast(1.1) saturate(1.2)',
+            filter: 'brightness(0.2) contrast(1.3) saturate(0.8) blur(0.5px)',
             transform: `scale(1.1) translate(${mousePosition.elementX * 0.01}px, ${mousePosition.elementY * 0.01}px)`
           }}
           priority
@@ -52,9 +52,9 @@ const Hero = () => {
 
       {/* Enhanced overlays */}
       <div className="absolute inset-0 z-10">
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-slate-900/20" />
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-slate-900/60" />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-slate-900/50" />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-slate-900/80" />
       </div>
       
       {/* Main content with enhanced animations */}
@@ -66,7 +66,7 @@ const Hero = () => {
           
 
           {/* Neuro-optimized heading with cognitive load reduction */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight text-white">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight text-white drop-shadow-2xl">
             <span className="block text-shadow-lg relative">
               <span className="absolute -inset-1 blur-xl bg-white/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <span className="relative">最高品質の</span>
@@ -89,7 +89,7 @@ const Hero = () => {
           </div>
 
           {/* Neuro-optimized subtitle with emotional triggers */}
-          <p className="text-xl md:text-2xl lg:text-3xl mb-12 font-light leading-relaxed max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl lg:text-3xl mb-12 font-light leading-relaxed max-w-4xl mx-auto drop-shadow-xl">
             <span className="text-gray-100">40年の</span>
             <span className="text-white font-medium mx-1 relative">
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
