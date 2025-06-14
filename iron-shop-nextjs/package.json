@@ -8,7 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "analyze": "ANALYZE=true next build",
+    "perf:budget": "node scripts/check-performance-budget.js",
+    "perf:audit": "npx lighthouse http://localhost:3000 --output=json --output-path=lighthouse-report.json",
+    "build:analyze": "npm run build && npm run analyze",
+    "clean": "rm -rf .next out",
+    "precommit": "npm run lint && npm run type-check"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -19,7 +25,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "@types/react": "^18.3.17",
+    "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.0.0",
@@ -27,7 +33,7 @@
     "postcss": "^8.5.1",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.2"
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=18.17.0",

@@ -42,7 +42,22 @@ next-env.d.ts
 *.swp
 *.swo
 
-# Python
+# Cache and Performance
+.cache/
+.parcel-cache/
+lighthouse-report.json
+
+# PWA (temporarily disabled)
+/public/sw.js.bak
+/public/sw.js.disabled
+/public/manifest.json.disabled
+/src/hooks/pwa.bak/
+
+# Backup files
+*.bak
+*.backup
+
+# Python (legacy)
 __pycache__/
 *.py[cod]
 *$py.class
