@@ -4,16 +4,13 @@ import Image from 'next/image'
 import React, { useCallback, useMemo } from 'react'
 import { cn } from '@/lib/utils'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
-import useMousePosition from '@/hooks/useMousePosition'
 import Button from '@/components/ui/Button'
-import NeuroOptimizer from '@/components/NeuroOptimizer'
 
 const Hero = () => {
   const [sectionRef, isVisible] = useIntersectionObserver({ 
     threshold: 0.1, 
     initialIsIntersecting: true 
   })
-  const mousePosition = useMousePosition(sectionRef)
 
   const scrollToGallery = useCallback(() => {
     const element = document.getElementById('gallery')
@@ -24,12 +21,12 @@ const Hero = () => {
 
 
   return (
-    <NeuroOptimizer section="hero" priority="high" className="relative h-screen flex flex-col justify-center text-white overflow-hidden">
-      <section 
-        ref={sectionRef}
-        id="home" 
-        className="w-full h-full relative"
-      >
+    <section 
+      ref={sectionRef}
+      id="home" 
+      className="relative h-screen text-white overflow-hidden"
+      style={{ paddingTop: '80px' }}
+    >
       {/* Enhanced background with parallax effect */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -39,7 +36,7 @@ const Hero = () => {
           className="object-cover transform scale-110 transition-transform duration-700"
           style={{ 
             filter: 'brightness(0.2) contrast(1.3) saturate(0.8) blur(0.5px)',
-            transform: `scale(1.1) translate(${mousePosition.elementX * 0.01}px, ${mousePosition.elementY * 0.01}px)`
+            transform: 'scale(1.1)'
           }}
           priority
           quality={100}
@@ -58,7 +55,7 @@ const Hero = () => {
       </div>
       
       {/* Main content with enhanced animations */}
-      <div className="relative z-10 text-center max-w-6xl px-6 mx-auto" style={{ paddingTop: '6rem' }}>
+      <div className="relative z-10 text-center max-w-6xl px-6 mx-auto flex flex-col justify-center h-full">
         <div className={cn(
           'transition-all duration-1000',
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -142,8 +139,7 @@ const Hero = () => {
         </div>
 
       </div>
-      </section>
-    </NeuroOptimizer>
+    </section>
   )
 }
 
