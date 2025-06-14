@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "buildCommand": "cd iron-shop-nextjs && npm install && npm run build",
+  "installCommand": "echo 'Using buildCommand for install'",
+  "outputDirectory": "iron-shop-nextjs/.next"
+}
