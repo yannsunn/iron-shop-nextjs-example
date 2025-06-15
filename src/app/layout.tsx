@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import SecurityFeatures from '@/components/SecurityFeatures'
 
 export const metadata: Metadata = {
   title: 'アイアンショップ - 高品質なアイアン製品',
@@ -45,6 +46,7 @@ export default function RootLayout({
     <html lang="ja">
       <head />
       <body className="font-sans leading-relaxed text-gray-800 antialiased">
+        <SecurityFeatures />
         <main className="min-h-screen">
           {children}
         </main>
