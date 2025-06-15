@@ -103,43 +103,43 @@ const products: Product[] = [
   },
   {
     id: 5,
-    name: "新商品5",
-    description: "新しいアイアン製品の説明がここに入ります。画像追加後に詳細を更新予定",
-    category: "新商品",
+    name: "サイドテーブル・C型アイアンフレーム",
+    description: "55×35×65cm・耐荷重35kg・ソファサイド用コンパクトテーブル・ヴィンテージ木目天板",
+    category: "サイドテーブル",
     features: [
-      "高品質アイアン素材",
-      "オーダーメイド対応",
-      "職人による手作り"
+      "C型アイアンフレーム",
+      "ヴィンテージ風木目天板",
+      "ソファサイドに最適"
     ],
     images: [
-      "/images/products/product5/main.jpg",
-      "/images/products/product5/detail1.jpg",
-      "/images/products/product5/detail2.jpg",
-      "/images/products/product5/detail3.jpg"
+      "/images/products/product5/6184V0WnxsL._AC_SL1500_.jpg",
+      "/images/products/product5/71Yj6gV1EKL._AC_SL1424_.jpg",
+      "/images/products/product5/81RrtBNv5YL._AC_SL1500_.jpg",
+      "/images/products/product5/81weWvsHdBL._AC_SL1290_.jpg"
     ],
-    customizable: ["サイズ", "デザイン", "仕上げ", "機能"],
-    leadTime: "4-5週間",
-    badge: "新商品"
+    customizable: ["サイズ", "天板素材", "フレーム色", "高さ"],
+    leadTime: "3-4週間",
+    badge: "コンパクト"
   },
   {
     id: 6,
-    name: "新商品6", 
-    description: "新しいアイアン製品の説明がここに入ります。画像追加後に詳細を更新予定",
-    category: "新商品",
+    name: "スクエアタイプ・2段シェルフ", 
+    description: "50×50×50cm・耐荷重100kg(上段)、50kg(下段)・ヴィンテージ木目シェルフ・防錆加工",
+    category: "シェルフ",
     features: [
-      "高品質アイアン素材",
-      "オーダーメイド対応", 
-      "職人による手作り"
+      "高耐荷重設計(100kg+50kg)",
+      "ヴィンテージ木目2段棚", 
+      "防錆・軽量設計"
     ],
     images: [
-      "/images/products/product6/main.jpg",
-      "/images/products/product6/detail1.jpg",
-      "/images/products/product6/detail2.jpg",
-      "/images/products/product6/detail3.jpg"
+      "/images/products/product6/61gJNuKmNoL._AC_SL1500_.jpg",
+      "/images/products/product6/61tVkgSjrqL._AC_SL1500_.jpg",
+      "/images/products/product6/71L1vcnXXbL._AC_SL1500_.jpg",
+      "/images/products/product6/71mQZDmHb7L._AC_SL1500_.jpg"
     ],
-    customizable: ["サイズ", "デザイン", "仕上げ", "機能"],
-    leadTime: "4-5週間",
-    badge: "新商品"
+    customizable: ["サイズ", "段数", "木目柄", "フレーム色"],
+    leadTime: "3-4週間",
+    badge: "大容量"
   }
 ]
 
