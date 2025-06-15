@@ -48,7 +48,7 @@ const Hero = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{ 
-            filter: 'brightness(0.7) contrast(1.4) saturate(1.1)',
+            filter: 'brightness(1.1) contrast(1.6) saturate(1.2)',
           }}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
@@ -80,14 +80,14 @@ const Hero = () => {
       </div>
 
 
-      {/* 調整されたオーバーレイ */}
+      {/* 軽量化されたオーバーレイ */}
       <div className="absolute inset-0 z-10">
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
       </div>
       
       {/* Main content with enhanced animations */}
-      <div className="relative z-10 text-center max-w-6xl px-6 mx-auto flex flex-col justify-center h-full">
+      <div className="relative z-20 text-center max-w-6xl px-6 mx-auto flex flex-col justify-center h-full">
         <div className={cn(
           'transition-all duration-1000',
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
