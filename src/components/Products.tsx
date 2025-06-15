@@ -100,6 +100,46 @@ const products: Product[] = [
     customizable: ["高さ", "X角度", "脚幅", "表面処理"],
     leadTime: "3-4週間",
     badge: "人気"
+  },
+  {
+    id: 5,
+    name: "新商品5",
+    description: "新しいアイアン製品の説明がここに入ります。画像追加後に詳細を更新予定",
+    category: "新商品",
+    features: [
+      "高品質アイアン素材",
+      "オーダーメイド対応",
+      "職人による手作り"
+    ],
+    images: [
+      "/images/products/product5/main.jpg",
+      "/images/products/product5/detail1.jpg",
+      "/images/products/product5/detail2.jpg",
+      "/images/products/product5/detail3.jpg"
+    ],
+    customizable: ["サイズ", "デザイン", "仕上げ", "機能"],
+    leadTime: "4-5週間",
+    badge: "新商品"
+  },
+  {
+    id: 6,
+    name: "新商品6", 
+    description: "新しいアイアン製品の説明がここに入ります。画像追加後に詳細を更新予定",
+    category: "新商品",
+    features: [
+      "高品質アイアン素材",
+      "オーダーメイド対応", 
+      "職人による手作り"
+    ],
+    images: [
+      "/images/products/product6/main.jpg",
+      "/images/products/product6/detail1.jpg",
+      "/images/products/product6/detail2.jpg",
+      "/images/products/product6/detail3.jpg"
+    ],
+    customizable: ["サイズ", "デザイン", "仕上げ", "機能"],
+    leadTime: "4-5週間",
+    badge: "新商品"
   }
 ]
 
