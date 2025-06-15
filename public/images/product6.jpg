@@ -1,0 +1,166 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="productBg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fefefe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stainlessSteel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#d1d5db;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#9ca3af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b7280;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="marbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#f1f5f9;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e2e8f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+    </linearGradient>
+    <filter id="prodShadow6" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="10" dy="15" stdDeviation="12" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+    <pattern id="marblePattern" patternUnits="userSpaceOnUse" width="30" height="30">
+      <rect width="30" height="30" fill="#f8fafc"/>
+      <path d="M0,15 Q15,5 30,15 Q15,25 0,15" fill="#e2e8f0" opacity="0.3"/>
+      <path d="M15,0 Q25,15 15,30 Q5,15 15,0" fill="#cbd5e1" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#productBg6)"/>
+  
+  <!-- Premium Kitchen Stand -->
+  <g transform="translate(150,150)" filter="url(#prodShadow6)">
+    
+    <!-- Main frame structure -->
+    <rect x="0" y="0" width="20" height="500" fill="url(#stainlessSteel)" rx="3"/>
+    <rect x="480" y="0" width="20" height="500" fill="url(#stainlessSteel)" rx="3"/>
+    
+    <!-- Top marble surface -->
+    <rect x="0" y="0" width="500" height="40" fill="url(#marbleGrad)" rx="8"/>
+    <rect x="0" y="0" width="500" height="40" fill="url(#marblePattern)" opacity="0.5" rx="8"/>
+    
+    <!-- Marble edge detail -->
+    <rect x="0" y="35" width="500" height="8" fill="#cbd5e1" rx="4"/>
+    
+    <!-- Upper shelf -->
+    <rect x="20" y="80" width="460" height="25" fill="url(#stainlessSteel)" rx="5"/>
+    <rect x="25" y="85" width="450" height="15" fill="#e5e7eb" rx="3"/>
+    
+    <!-- Middle shelf -->
+    <rect x="20" y="200" width="460" height="25" fill="url(#stainlessSteel)" rx="5"/>
+    <rect x="25" y="205" width="450" height="15" fill="#e5e7eb" rx="3"/>
+    
+    <!-- Bottom shelf -->
+    <rect x="20" y="320" width="460" height="25" fill="url(#stainlessSteel)" rx="5"/>
+    <rect x="25" y="325" width="450" height="15" fill="#e5e7eb" rx="3"/>
+    
+    <!-- Professional equipment hooks -->
+    <g transform="translate(50,120)">
+      <circle cx="0" cy="0" r="8" fill="url(#stainlessSteel)"/>
+      <path d="M-6,0 Q0,-10 6,0" fill="none" stroke="url(#stainlessSteel)" stroke-width="4" stroke-linecap="round"/>
+      
+      <circle cx="50" cy="0" r="8" fill="url(#stainlessSteel)"/>
+      <path d="M44,0 Q50,-10 56,0" fill="none" stroke="url(#stainlessSteel)" stroke-width="4" stroke-linecap="round"/>
+      
+      <circle cx="100" cy="0" r="8" fill="url(#stainlessSteel)"/>
+      <path d="M94,0 Q100,-10 106,0" fill="none" stroke="url(#stainlessSteel)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Kitchen utensils hanging -->
+    <g transform="translate(55,110)">
+      <!-- Ladle -->
+      <rect x="-2" y="0" width="4" height="60" fill="#6b7280" rx="2"/>
+      <circle cx="0" cy="65" r="12" fill="#6b7280"/>
+      <circle cx="0" cy="65" r="8" fill="#9ca3af"/>
+    </g>
+    
+    <g transform="translate(105,110)">
+      <!-- Whisk -->
+      <rect x="-2" y="0" width="4" height="50" fill="#6b7280" rx="2"/>
+      <path d="M-8,50 L8,70 M-4,50 L4,70 M0,50 L0,70 M4,50 L-4,70 M8,50 L-8,70" 
+            stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Cutting boards on middle shelf -->
+    <g transform="translate(50,180)">
+      <rect x="0" y="0" width="80" height="8" fill="#8b4513" rx="4"/>
+      <rect x="90" y="0" width="80" height="8" fill="#a0522d" rx="4"/>
+      <rect x="180" y="0" width="80" height="8" fill="#654321" rx="4"/>
+    </g>
+    
+    <!-- Storage containers on bottom shelf -->
+    <g transform="translate(40,300)">
+      <!-- Glass jars -->
+      <rect x="0" y="0" width="30" height="50" fill="#f8fafc" opacity="0.8" rx="5"/>
+      <rect x="0" y="0" width="30" height="15" fill="#d1d5db" rx="5"/>
+      <circle cx="15" cy="7" r="3" fill="#9ca3af"/>
+      
+      <rect x="40" y="0" width="30" height="50" fill="#f8fafc" opacity="0.8" rx="5"/>
+      <rect x="40" y="0" width="30" height="15" fill="#d1d5db" rx="5"/>
+      <circle cx="55" cy="7" r="3" fill="#9ca3af"/>
+      
+      <rect x="80" y="0" width="30" height="50" fill="#f8fafc" opacity="0.8" rx="5"/>
+      <rect x="80" y="0" width="30" height="15" fill="#d1d5db" rx="5"/>
+      <circle cx="95" cy="7" r="3" fill="#9ca3af"/>
+    </g>
+    
+    <!-- Professional mixing bowls -->
+    <g transform="translate(300,290)">
+      <ellipse cx="40" cy="40" rx="35" ry="15" fill="url(#stainlessSteel)"/>
+      <ellipse cx="40" cy="35" rx="30" ry="12" fill="#e5e7eb"/>
+      
+      <ellipse cx="80" cy="45" rx="25" ry="12" fill="url(#stainlessSteel)"/>
+      <ellipse cx="80" cy="42" rx="20" ry="10" fill="#e5e7eb"/>
+      
+      <ellipse cx="120" cy="48" rx="20" ry="10" fill="url(#stainlessSteel)"/>
+      <ellipse cx="120" cy="46" rx="15" ry="8" fill="#e5e7eb"/>
+    </g>
+    
+    <!-- Towel bar -->
+    <rect x="400" y="60" width="60" height="8" fill="url(#stainlessSteel)" rx="4"/>
+    <rect x="410" y="55" width="40" height="3" fill="#ffffff" rx="1"/>
+    
+    <!-- Adjustable feet -->
+    <circle cx="25" cy="515" r="15" fill="url(#stainlessSteel)"/>
+    <circle cx="475" cy="515" r="15" fill="url(#stainlessSteel)"/>
+    <circle cx="25" cy="515" r="8" fill="#d1d5db"/>
+    <circle cx="475" cy="515" r="8" fill="#d1d5db"/>
+    
+    <!-- Brand plate -->
+    <rect x="200" y="450" width="100" height="30" fill="url(#stainlessSteel)" rx="5"/>
+    <text x="250" y="470" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#374151" font-weight="bold">
+      PROFESSIONAL
+    </text>
+    
+    <!-- Metal shine effects -->
+    <rect x="2" y="2" width="6" height="496" fill="#f3f4f6" opacity="0.8" rx="2"/>
+    <rect x="482" y="2" width="6" height="496" fill="#f3f4f6" opacity="0.8" rx="2"/>
+    <rect x="2" y="2" width="496" height="8" fill="#f3f4f6" opacity="0.6" rx="4"/>
+    
+    <!-- Stainless steel brushed texture -->
+    <g opacity="0.2">
+      <line x1="30" y1="90" x2="470" y2="90" stroke="#9ca3af" stroke-width="0.5"/>
+      <line x1="30" y1="95" x2="470" y2="95" stroke="#9ca3af" stroke-width="0.5"/>
+      <line x1="30" y1="100" x2="470" y2="100" stroke="#9ca3af" stroke-width="0.5"/>
+      <line x1="30" y1="210" x2="470" y2="210" stroke="#9ca3af" stroke-width="0.5"/>
+      <line x1="30" y1="215" x2="470" y2="215" stroke="#9ca3af" stroke-width="0.5"/>
+      <line x1="30" y1="330" x2="470" y2="330" stroke="#9ca3af" stroke-width="0.5"/>
+      <line x1="30" y1="335" x2="470" y2="335" stroke="#9ca3af" stroke-width="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Product label -->
+  <g transform="translate(50,650)">
+    <rect x="0" y="0" width="200" height="60" fill="#6b7280" rx="8"/>
+    <text x="100" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="white" font-weight="bold">
+      プレミアム
+    </text>
+    <text x="100" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#d1d5db">
+      キッチンスタンド
+    </text>
+  </g>
+  
+  <!-- Floor reflection -->
+  <ellipse cx="400" cy="750" rx="350" ry="25" fill="#000000" opacity="0.08"/>
+</svg>
