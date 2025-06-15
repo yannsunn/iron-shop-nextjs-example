@@ -76,6 +76,8 @@ const About = () => {
             1984年創業以来、40年にわたりアイアン家具製作の最前線で
             <span className="text-blue-600 font-semibold">職人の技と革新</span>
             を追求し続けています
+            <br />
+            <span className="text-red-600 text-sm font-medium">※これはポートフォリオ用のサンプルサイトです</span>
           </p>
         </div>
 

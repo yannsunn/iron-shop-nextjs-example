@@ -115,7 +115,7 @@ const CompanyInfo = () => {
                       <h3 className="font-bold text-purple-800 mb-4 text-lg">製造パートナー</h3>
                       <div className="space-y-3">
                         <div className="bg-white p-4 rounded border border-purple-300">
-                          <h4 className="font-bold text-purple-700 mb-2">株式会社yu's</h4>
+                          <h4 className="font-bold text-purple-700 mb-2">株式会社yu&apos;s</h4>
                           <ul className="space-y-1 text-sm text-gray-700">
                             <li className="flex items-center gap-2">
                               <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
@@ -185,7 +185,7 @@ const CompanyInfo = () => {
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">製造</h3>
-                        <p className="text-gray-700">株式会社yu's（当社品質管理のもと製作）</p>
+                        <p className="text-gray-700">株式会社yu&apos;s（当社品質管理のもと製作）</p>
                       </div>
                     </div>
                     

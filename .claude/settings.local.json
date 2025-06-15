@@ -58,7 +58,8 @@
       "Bash(npx tsc:*)",
       "Bash(npm ls:*)",
       "Bash(npm run save:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": []
   }

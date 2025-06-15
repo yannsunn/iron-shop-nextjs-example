@@ -1,12 +1,12 @@
 export const SITE_CONFIG = {
-  name: 'アイアンショップ',
-  description: '職人の技が光る、こだわりのアイアン製品をお届けします',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iron-shop-nextjs.vercel.app',
+  name: 'アイアンショップ Example',
+  description: '職人の技が光る、こだわりのアイアン製品をお届けします（サンプルサイト）',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iron-shop-nextjs-example.vercel.app',
   ogImage: '/images/hero.jpg',
   contact: {
-    email: 'info@ironshop.com',
-    phone: '03-0000-0000',
-    address: '〒000-0000 東京都○○区○○1-1-1',
+    email: 'info@example-ironshop.com',
+    phone: '03-1234-5678',
+    address: '〒100-0001 東京都千代田区千代田1-1-1 エグザンプルビル3F',
   },
   business: {
     hours: '平日: 9:00 - 18:00',
@@ -15,9 +15,9 @@ export const SITE_CONFIG = {
 } as const
 
 export const SEO_DEFAULTS = {
-  title: 'アイアンショップ - 高品質なアイアン製品',
-  description: '職人の技が光る、こだわりのアイアン製品をお届けします。アンティーク調からモダンまで、幅広いデザインをご提供。',
-  keywords: 'アイアン,鉄製品,インテリア,家具,アンティーク,インダストリアル,鉄工所,オーダーメイド',
+  title: 'アイアンショップ Example - 高品質なアイアン製品（サンプル）',
+  description: '職人の技が光る、こだわりのアイアン製品をお届けします。アンティーク調からモダンまで、幅広いデザインをご提供。※これはサンプルサイトです。',
+  keywords: 'アイアン,鉄製品,インテリア,家具,アンティーク,インダストリアル,鉄工所,オーダーメイド,サンプル,ポートフォリオ',
   openGraph: {
     type: 'website',
     locale: 'ja_JP',

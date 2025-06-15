@@ -37,7 +37,7 @@ const Hero = () => {
       ref={sectionRef}
       id="home" 
       className="relative h-screen text-white overflow-hidden"
-      style={{ paddingTop: '60px' }}
+      style={{ paddingTop: '100px' }}
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
@@ -94,7 +94,7 @@ const Hero = () => {
                 <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 border-2 border-white/50" />
               ))}
             </div>
-            <span className="text-sm text-white/90 font-medium">1,200+ 満足のお客様</span>
+            <span className="text-sm text-white/90 font-medium">1,200+ 満足のお客様（サンプル）</span>
             <span className="text-amber-400">★★★★★</span>
           </div>
 
@@ -108,7 +108,7 @@ const Hero = () => {
             <div className="flex justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-white rounded-full opacity-60" />
-                <span>1,200+ のお客様</span>
+                <span>1,200+ のお客様（例）</span>
               </div>
               <div className="flex items-center gap-2">
                 <span>★★★★★</span>
