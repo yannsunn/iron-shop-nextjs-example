@@ -163,15 +163,15 @@ const Products = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            <span className="font-thin text-gray-800">プレミアム</span>
+            <span className="font-thin text-gray-800">製品</span>
             <span className="block mt-2 font-bold text-gray-900">
-              コレクション
+              ギャラリー
             </span>
           </h2>
           
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             長年の経験と精密な技術が生み出す、唯一無二のアイアン作品。<br />
-            お客様の空間に合わせたオーダーメイドの美しさをご覧ください。
+            オーダーメイドの美しさと実用性を兼ね備えた製品をご覧ください。
           </p>
         </div>
 

@@ -25,7 +25,7 @@ const Hero = () => {
   }, [])
 
   const scrollToGallery = useCallback(() => {
-    const element = document.getElementById('gallery')
+    const element = document.getElementById('products')
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
