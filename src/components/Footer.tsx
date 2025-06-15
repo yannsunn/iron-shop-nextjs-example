@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Vintage Iron Works Example</h3>
-                <p className="text-slate-400 text-sm">ヴィンテージアイアン製品（サンプル）</p>
+                <p className="text-slate-400 text-sm">ヴィンテージアイアン製品</p>
               </div>
             </div>
             <p className="text-slate-300 leading-relaxed">
