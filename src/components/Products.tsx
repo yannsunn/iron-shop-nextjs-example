@@ -82,24 +82,22 @@ const Products = () => {
           "text-center mb-16 transition-all duration-1000",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}>
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-amber-50 rounded-full">
-            <svg className="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gray-100 rounded">
+            <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
             </svg>
-            <span className="text-amber-700 font-semibold text-sm">厳選された逸品コレクション</span>
+            <span className="text-gray-700 font-medium text-sm">コレクション</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gray-800">匠の技が創る</span>
-            <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
+          <h2 className="text-4xl md:text-5xl font-light mb-6">
+            <span className="font-thin text-gray-800">匠の技が創る</span>
+            <span className="block mt-2 font-bold text-gray-900">
               プレミアムコレクション
             </span>
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            40年の歴史が培った確かな技術力。世界に認められた職人が一つ一つ丁寧に仕上げる、
-            <br />
-            <span className="font-semibold text-gray-800">本物の価値</span>をお届けします。
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            40年の歴史が培った確かな技術力で、一つ一つ丁寧に仕上げる本物の価値をお届けします。
           </p>
         </div>
 
@@ -117,28 +115,19 @@ const Products = () => {
               onMouseLeave={() => setHoveredProduct(null)}
             >
               <Card className="h-full overflow-hidden group relative">
-                {/* 商品バッジ */}
+                {/* シンプルな商品バッジ */}
                 {product.badge && (
                   <div className="absolute top-4 left-4 z-10">
                     <div className={cn(
-                      "px-3 py-1 text-xs font-bold rounded-full",
-                      product.badge === "LIMITED" && "bg-red-500 text-white",
-                      product.badge === "BEST SELLER" && "bg-gradient-to-r from-amber-500 to-orange-500 text-white",
-                      product.badge === "NEW" && "bg-emerald-500 text-white"
+                      "px-3 py-1 text-xs font-medium rounded bg-white/90 backdrop-blur-sm text-gray-800 border border-gray-200",
                     )}>
-                      {product.badge}
+                      {product.badge === "LIMITED" && "限定"}
+                      {product.badge === "BEST SELLER" && "人気"}
+                      {product.badge === "NEW" && "新作"}
                     </div>
                   </div>
                 )}
 
-                {/* 在庫状況（ニューロマーケティング：希少性） */}
-                {product.stockCount && product.stockCount <= 5 && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="px-3 py-1 bg-black/80 text-white text-xs font-medium rounded-full backdrop-blur-sm">
-                      残り{product.stockCount}点
-                    </div>
-                  </div>
-                )}
 
                 {/* 商品画像 */}
                 <div className="relative h-80 overflow-hidden">
@@ -156,15 +145,6 @@ const Products = () => {
 
                 {/* 商品情報 */}
                 <div className="p-6 space-y-4">
-                  {/* 販売実績（社会的証明） */}
-                  {product.soldCount && (
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <svg className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
-                      </svg>
-                      <span>{product.soldCount}名のお客様がご購入</span>
-                    </div>
-                  )}
 
                   <h3 className="text-xl font-bold text-gray-800 group-hover:text-amber-600 transition-colors">
                     {product.name}
@@ -207,23 +187,14 @@ const Products = () => {
                     </div>
                   </div>
 
-                  {/* CTA ボタン */}
-                  <div className="flex gap-3 pt-4">
-                    <Button
-                      variant="primary"
-                      size="md"
-                      className="flex-1 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700"
-                    >
-                      詳細を見る
-                    </Button>
+                  {/* シンプルなCTA ボタン */}
+                  <div className="pt-4">
                     <Button
                       variant="outline"
                       size="md"
-                      className="border-amber-600 text-amber-600 hover:bg-amber-50"
+                      className="w-full border-gray-300 text-gray-700 hover:bg-gray-50"
                     >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
+                      詳細を見る
                     </Button>
                   </div>
                 </div>
@@ -232,29 +203,27 @@ const Products = () => {
           ))}
         </div>
 
-        {/* 限定オファー（ニューロマーケティング：行動促進） */}
+        {/* シンプルなお問い合わせセクション */}
         <div className={cn(
-          "mt-16 p-8 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl border border-amber-200 text-center transition-all duration-1000",
+          "mt-16 p-8 bg-gray-50 rounded-lg border border-gray-200 text-center transition-all duration-1000",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}
         style={{ transitionDelay: "400ms" }}
         >
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-800 mb-3">
-              🎁 本日限定特典
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-2xl font-light text-gray-800 mb-3">
+              お問い合わせ
             </h3>
-            <p className="text-lg text-gray-700 mb-6">
-              今すぐご注文いただいたお客様に限り、
-              <span className="font-bold text-amber-600">配送料無料 + 10年保証</span>
-              をお付けいたします
+            <p className="text-lg text-gray-600 mb-6">
+              オーダーメイドのご相談や、作品に関するご質問など、お気軽にお声がけください。
             </p>
             <div className="flex justify-center">
               <Button
-                variant="primary"
+                variant="outline"
                 size="lg"
-                className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 px-8"
+                className="border-gray-300 text-gray-700 hover:bg-gray-100 px-8"
               >
-                特典を受け取る
+                お問い合わせ
               </Button>
             </div>
           </div>

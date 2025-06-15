@@ -28,36 +28,36 @@ interface GalleryItemProps {
 const galleryItems: GalleryItem[] = [
   {
     id: 'gallery1',
-    title: 'アンティーク調シェルフ',
-    description: 'ヴィンテージ感あふれる収納棚のオーダーメイド作品',
+    title: 'モダンスチールシェルフ',
+    description: '精密加工されたブラックスチールフレームによる高級ミニマルデザイン',
     image: '/images/iron1.jpg',
-    alt: 'アンティークアイアンシェルフ施工例',
+    alt: 'モダンスチールシェルフ施工例 - ミニマルデザイン',
     category: 'furniture',
     featured: true,
   },
   {
     id: 'gallery2',
-    title: 'インダストリアルテーブル',
-    description: '無垢材とアイアンを組み合わせたダイニングテーブル',
+    title: 'コンテンポラリーダイニングテーブル',
+    description: 'プレミアムオーク材×マットブラックスチールの洗練された組み合わせ',
     image: '/images/iron2.jpg',
-    alt: 'インダストリアルテーブル施工例',
+    alt: 'コンテンポラリーダイニングテーブル施工例',
     category: 'furniture',
   },
   {
     id: 'gallery3',
-    title: 'アートパーテーション',
-    description: '空間を美しく仕切るジオメトリックデザイン',
+    title: 'アーキテクチュラルパーテーション',
+    description: '空間を芸術作品に変える精密なジオメトリックデザイン',
     image: '/images/iron3.jpg',
-    alt: 'デザインパーテーション施工例',
+    alt: 'アーキテクチュラルパーテーション施工例',
     category: 'decoration',
     featured: true,
   },
   {
     id: 'gallery4',
-    title: 'カスタム階段手すり',
-    description: '住宅用オーダーメイド階段手すりの施工例',
+    title: 'ラグジュアリーリビング空間',
+    description: 'ブラックアイアンで統一されたモダンラグジュアリー空間の総合デザイン',
     image: '/images/hero.jpg',
-    alt: 'カスタム階段手すり施工例',
+    alt: 'ラグジュアリーリビング空間施工例',
     category: 'architecture',
   },
 ]
@@ -180,15 +180,12 @@ const GalleryItem = React.memo<GalleryItemProps>(({
             {item.description}
           </p>
           
-          {/* Scarcity and urgency trigger */}
+          {/* Clean call to action */}
           <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-200">
-            <span className="text-sm text-red-600 font-medium flex items-center gap-1">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-              </svg>
-              受注枠残り2名様
+            <span className="text-sm text-slate-500 font-medium">
+              オーダーメイド制作
             </span>
-            <span className="text-xs text-slate-500">クリックで詳細を見る →</span>
+            <span className="text-xs text-slate-400">詳細を見る →</span>
           </div>
         </div>
       </div>
@@ -226,14 +223,23 @@ const Gallery = () => {
           'text-center mb-20 transition-all duration-1000',
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         )}>
-          <div className="inline-block">
-            <h2 className="text-6xl font-bold text-slate-900 mb-6 tracking-tight">
-              施工事例ギャラリー
-            </h2>
-            <div className="h-1 w-24 mx-auto bg-blue-600 rounded-full shadow-lg" />
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gray-100 rounded">
+            <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
+              <path fillRule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clipRule="evenodd"/>
+            </svg>
+            <span className="text-gray-700 font-medium text-sm">プレミアムコレクション</span>
           </div>
-          <p className="text-xl text-slate-600 mt-8 max-w-2xl mx-auto leading-relaxed font-light">
-            オーダーメイドで製作したアイアン製品の施工事例をご紹介します
+          
+          <h2 className="text-4xl md:text-5xl font-light text-slate-900 mb-6 tracking-tight">
+            <span className="font-thin">作品</span>
+            <span className="font-bold ml-2">ギャラリー</span>
+          </h2>
+          
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            長年の経験と精密な技術が生み出す、唯一無二のアイアン作品。
+            <br />
+            お客様の空間に合わせたオーダーメイドの美しさをご覧ください。
           </p>
         </div>
         

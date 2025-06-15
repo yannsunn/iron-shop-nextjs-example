@@ -59,10 +59,10 @@ const Hero = () => {
       </div>
 
 
-      {/* プレミアムグラデーションオーバーレイ */}
+      {/* 洗練されたオーバーレイ */}
       <div className="absolute inset-0 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/20 to-transparent" />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
       </div>
       
       {/* Main content with enhanced animations */}
@@ -73,27 +73,20 @@ const Hero = () => {
         )}>
           
 
-          {/* ニューロデザイン：プレミアム感を演出するヘッドライン */}
+          {/* クリーンで高級感のあるヘッドライン */}
           <div className="mb-6">
-            {/* 信頼性バッジ */}
-            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-amber-500/20 backdrop-blur-md rounded-full border border-amber-400/30">
-              <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+            <div className="inline-flex items-center gap-3 mb-6 px-6 py-3 bg-black/30 backdrop-blur-sm rounded border border-white/20">
+              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
               </svg>
-              <span className="text-amber-300 font-semibold text-sm">創業40年・職人直売店</span>
+              <span className="text-white font-medium text-sm tracking-wide">創業40年 - 職人の技術</span>
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight text-white">
-            <span className="block mb-3">
-              <span className="relative">
-                <span className="absolute -inset-1 blur-2xl bg-gradient-to-r from-amber-400/30 to-orange-400/30 rounded-lg" />
-                <span className="relative bg-gradient-to-b from-white to-gray-200 bg-clip-text text-transparent">最高級</span>
-              </span>
-              <span className="text-white">の逸品</span>
-            </span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-orange-400 drop-shadow-2xl">
-              アイアン家具
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 tracking-tight text-white leading-none">
+            <span className="block mb-4 font-thin">最高品質の</span>
+            <span className="block font-bold text-6xl md:text-8xl lg:text-9xl">
+              アイアン製品
             </span>
           </h1>
 
@@ -108,92 +101,55 @@ const Hero = () => {
             <span className="text-amber-400">★★★★★</span>
           </div>
 
-          {/* 心理的価値提案 */}
-          <div className="mb-12 space-y-4">
-            <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed max-w-4xl mx-auto text-white">
-              <span className="text-gray-200">一流の空間を創る、</span>
-              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-400">
-                唯一無二の存在感
-              </span>
+          {/* シンプルで洗練された価値提案 */}
+          <div className="mb-12">
+            <p className="text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto text-gray-200 mb-8">
+              40年の職人技が生み出す、一生モノの品質と美しさ
             </p>
             
-            {/* リアルタイム社会的証明 */}
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-full">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-gray-300">{viewerCount}名が閲覧中</span>
+            {/* 控えめな社会的証明 */}
+            <div className="flex justify-center gap-8 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-white rounded-full opacity-60" />
+                <span>1,200+ のお客様</span>
               </div>
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-red-500/20 backdrop-blur-sm rounded-full border border-red-400/30">
-                <svg className="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                </svg>
-                <span className="text-red-300 font-medium">残り{stockCount}点のみ</span>
+              <div className="flex items-center gap-2">
+                <span>★★★★★</span>
+                <span>4.9/5.0</span>
               </div>
             </div>
           </div>
 
-          {/* ニューロマーケティング最適化CTA */}
-          <div className="space-y-6">
-            {/* メインCTAエリア */}
+          {/* 洗練されたCTA */}
+          <div className="space-y-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              {/* プライマリCTA：購買行動を促進 */}
-              <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-2xl blur-lg opacity-70 animate-pulse" />
-                <Button
-                  variant="premium"
-                  size="xl"
-                  rounded="xl"
-                  onClick={scrollToGallery}
-                  className="relative bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-bold px-8 py-5 text-lg shadow-2xl transform transition-all duration-300 hover:scale-105 active:scale-95"
-                >
-                  <span className="flex items-center gap-3">
-                    <span>限定作品を見る</span>
-                    <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                  </span>
-                </Button>
-              </div>
-              
-              {/* セカンダリCTA：信頼性構築 */}
               <Button
-                variant="ghost"
+                variant="primary"
+                size="xl"
+                onClick={scrollToGallery}
+                className="bg-white text-black hover:bg-gray-100 px-8 py-4 font-medium tracking-wide transition-all duration-300 hover:scale-105"
+              >
+                作品を見る
+              </Button>
+              
+              <Button
+                variant="outline"
                 size="lg"
-                rounded="xl"
-                className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+                className="border-white/40 text-white hover:bg-white/10"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <span className="flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>品質保証について</span>
-                </span>
+                職人について
               </Button>
             </div>
 
             
-            {/* 信頼性指標 */}
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <div className="flex items-center gap-2 text-white/80">
-                <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>10年保証付き</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/80">
-                <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z" />
-                </svg>
-                <span>98%のお客様が満足</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/80">
-                <svg className="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                  <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z" />
-                </svg>
-                <span>全国配送無料</span>
-              </div>
+            {/* 控えめな信頼性指標 */}
+            <div className="flex justify-center gap-8 text-sm text-gray-400">
+              <span>品質保証10年</span>
+              <span>•</span>
+              <span>全国配送対応</span>
+              <span>•</span>
+              <span>オーダーメイド可</span>
             </div>
           </div>
         </div>
