@@ -41,14 +41,44 @@ const Hero = () => {
     >
       {/* Enhanced background with parallax effect */}
       <div className="absolute inset-0 z-0">
-        {/* SVG背景画像の直接表示（Next.js Image互換性問題回避） */}
+        {/* Dynamic background - SVG pattern fallback for missing images */}
+        <div 
+          className="absolute inset-0 w-full h-full transform scale-110 transition-transform duration-700"
+          style={{ 
+            background: `
+              linear-gradient(45deg, #1a1a1a 25%, transparent 25%), 
+              linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #1a1a1a 75%), 
+              linear-gradient(-45deg, transparent 75%, #1a1a1a 75%)
+            `,
+            backgroundSize: '60px 60px',
+            backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px',
+            opacity: 0.3
+          }}
+        />
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{ 
+            background: 'radial-gradient(circle at center, rgba(139, 69, 19, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%)',
+            filter: 'blur(1px)'
+          }}
+        />
+        {/* Optional: Try to load hero image with fallback */}
         <img
           src="/images/hero.jpg"
           alt="アイアンショップ - 職人の技が光る高品質アイアン製品"
-          className="absolute inset-0 w-full h-full object-cover transform scale-110 transition-transform duration-700"
+          className="absolute inset-0 w-full h-full object-cover transform scale-110 transition-transform duration-700 opacity-0"
           style={{ 
             filter: 'brightness(0.2) contrast(1.3) saturate(0.8) blur(0.5px)',
             transform: 'scale(1.1)'
+          }}
+          onLoad={(e) => {
+            const img = e.target as HTMLImageElement;
+            img.style.opacity = '1';
+          }}
+          onError={(e) => {
+            const img = e.target as HTMLImageElement;
+            img.style.display = 'none';
           }}
         />
       </div>

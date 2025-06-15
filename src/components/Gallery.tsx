@@ -110,16 +110,42 @@ const GalleryItem = React.memo<GalleryItemProps>(({
           <div className="absolute inset-0 bg-gray-200 animate-pulse" />
         )}
         
+        {/* Enhanced image with fallback pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900">
+          <div 
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: `
+                linear-gradient(45deg, #4a5568 25%, transparent 25%), 
+                linear-gradient(-45deg, #4a5568 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #4a5568 75%), 
+                linear-gradient(-45deg, transparent 75%, #4a5568 75%)
+              `,
+              backgroundSize: '40px 40px',
+              backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px'
+            }}
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white/60">
+              <svg className="w-16 h-16 mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+              </svg>
+              <p className="text-sm font-medium">アイアン製品</p>
+            </div>
+          </div>
+        </div>
+        
         {/* SVG画像用の直接表示（Next.js Imageの互換性問題回避） */}
         <img
           src={item.image}
           alt={item.alt}
           className={cn(
-            'w-full h-full object-cover transition-all duration-700',
+            'absolute inset-0 w-full h-full object-cover transition-all duration-700',
             'group-hover:scale-110 group-hover:brightness-110 group-hover:contrast-110',
             imageLoaded ? 'opacity-100' : 'opacity-0'
           )}
           onLoad={() => setImageLoaded(true)}
+          onError={() => setImageLoaded(true)} // Show fallback on error
           loading="lazy"
         />
         

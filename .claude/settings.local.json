@@ -57,7 +57,8 @@
       "WebFetch(domain:www.amazon.co.jp)",
       "Bash(npx tsc:*)",
       "Bash(npm ls:*)",
-      "Bash(npm run save:*)"
+      "Bash(npm run save:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": []
   }
