@@ -39,9 +39,23 @@ const Hero = () => {
       className="relative h-screen text-white overflow-hidden"
       style={{ paddingTop: '60px' }}
     >
-      {/* Enhanced background with parallax effect */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        {/* Dynamic background - SVG pattern fallback for missing images */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ 
+            filter: 'brightness(0.4) contrast(1.2)',
+          }}
+        >
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+        </video>
+        
+        {/* Fallback background for when video fails to load */}
         <div 
           className="absolute inset-0 w-full h-full transform scale-110 transition-transform duration-700"
           style={{ 
@@ -61,24 +75,6 @@ const Hero = () => {
           style={{ 
             background: 'radial-gradient(circle at center, rgba(139, 69, 19, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%)',
             filter: 'blur(1px)'
-          }}
-        />
-        {/* Optional: Try to load hero image with fallback */}
-        <img
-          src="/images/hero.jpg"
-          alt="アイアンショップ - 職人の技が光る高品質アイアン製品"
-          className="absolute inset-0 w-full h-full object-cover transform scale-110 transition-transform duration-700 opacity-0"
-          style={{ 
-            filter: 'brightness(0.2) contrast(1.3) saturate(0.8) blur(0.5px)',
-            transform: 'scale(1.1)'
-          }}
-          onLoad={(e) => {
-            const img = e.target as HTMLImageElement;
-            img.style.opacity = '1';
-          }}
-          onError={(e) => {
-            const img = e.target as HTMLImageElement;
-            img.style.display = 'none';
           }}
         />
       </div>
