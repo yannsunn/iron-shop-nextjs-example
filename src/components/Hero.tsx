@@ -48,7 +48,7 @@ const Hero = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{ 
-            filter: 'brightness(0.4) contrast(1.2)',
+            filter: 'brightness(0.7) contrast(1.4) saturate(1.1)',
           }}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
@@ -60,30 +60,30 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full transform scale-110 transition-transform duration-700"
           style={{ 
             background: `
-              linear-gradient(45deg, #1a1a1a 25%, transparent 25%), 
-              linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, #1a1a1a 75%), 
-              linear-gradient(-45deg, transparent 75%, #1a1a1a 75%)
+              linear-gradient(45deg, #2a2a2a 25%, transparent 25%), 
+              linear-gradient(-45deg, #2a2a2a 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #2a2a2a 75%), 
+              linear-gradient(-45deg, transparent 75%, #2a2a2a 75%)
             `,
             backgroundSize: '60px 60px',
             backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px',
-            opacity: 0.3
+            opacity: 0.4
           }}
         />
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            background: 'radial-gradient(circle at center, rgba(139, 69, 19, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%)',
+            background: 'radial-gradient(circle at center, rgba(160, 82, 45, 0.4) 0%, rgba(20, 20, 20, 0.8) 100%)',
             filter: 'blur(1px)'
           }}
         />
       </div>
 
 
-      {/* 洗練されたオーバーレイ */}
+      {/* 調整されたオーバーレイ */}
       <div className="absolute inset-0 z-10">
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       </div>
       
       {/* Main content with enhanced animations */}
