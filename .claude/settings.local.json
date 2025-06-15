@@ -38,7 +38,9 @@
       "Bash(powershell.exe:*)",
       "Bash(wsl.exe --exec bash -c \"cd /mnt/c/Users/march/Aian/Aian && git add . && git commit -m 'Deploy ready' && git push origin main\")",
       "WebFetch(domain:www.slazzer.com)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(git lfs:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }

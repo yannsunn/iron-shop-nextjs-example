@@ -1,10 +1,83 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c0c0c;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#2d2d2d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#404040;stop-opacity:1" />
     </linearGradient>
+    <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:0.4" />
+    </linearGradient>
+    <filter id="heroShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology operator="dilate" radius="2"/>
+      <feGaussianBlur stdDeviation="8"/>
+      <feOffset dx="4" dy="8" result="offset"/>
+      <feFlood flood-color="#000000" flood-opacity="0.3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
-  <rect width="100%" height="100%" fill="url(#grad1)"/>
-  <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">アイアンショップ</text>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#heroGrad1)"/>
+  
+  <!-- Modern Iron Furniture Silhouettes -->
+  <!-- Contemporary Table -->
+  <g transform="translate(300,300)" filter="url(#heroShadow)">
+    <rect x="0" y="380" width="400" height="20" fill="#2d3748" rx="10"/>
+    <rect x="20" y="300" width="12" height="100" fill="#4a5568"/>
+    <rect x="368" y="300" width="12" height="100" fill="#4a5568"/>
+    <rect x="20" y="100" width="12" height="100" fill="#4a5568"/>
+    <rect x="368" y="100" width="12" height="100" fill="#4a5568"/>
+    <rect x="0" y="80" width="400" height="40" fill="#1a202c" rx="5"/>
+  </g>
+  
+  <!-- Elegant Shelf -->
+  <g transform="translate(800,200)" filter="url(#heroShadow)">
+    <rect x="0" y="0" width="300" height="15" fill="#2d3748"/>
+    <rect x="0" y="80" width="300" height="15" fill="#2d3748"/>
+    <rect x="0" y="160" width="300" height="15" fill="#2d3748"/>
+    <rect x="0" y="240" width="300" height="15" fill="#2d3748"/>
+    <rect x="0" y="0" width="15" height="255" fill="#4a5568"/>
+    <rect x="285" y="0" width="15" height="255" fill="#4a5568"/>
+  </g>
+  
+  <!-- Decorative Iron Patterns -->
+  <g transform="translate(1200,400)" filter="url(#heroShadow)">
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#4a5568" stroke-width="8"/>
+    <circle cx="50" cy="50" r="20" fill="none" stroke="#2d3748" stroke-width="4"/>
+    <path d="M10,50 Q50,10 90,50 Q50,90 10,50" fill="none" stroke="#1a202c" stroke-width="6"/>
+    <path d="M50,10 Q90,50 50,90 Q10,50 50,10" fill="none" stroke="#1a202c" stroke-width="6"/>
+  </g>
+  
+  <!-- Iron Railing Pattern -->
+  <g transform="translate(100,700)" filter="url(#heroShadow)">
+    <rect x="0" y="0" width="1720" height="8" fill="#2d3748"/>
+    <rect x="0" y="80" width="1720" height="8" fill="#2d3748"/>
+    <g transform="translate(0,8)">
+      <rect x="50" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="150" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="250" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="350" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="450" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="550" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="650" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="750" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="850" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="950" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="1050" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="1150" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="1250" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="1350" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="1450" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="1550" y="0" width="6" height="72" fill="#4a5568"/>
+      <rect x="1650" y="0" width="6" height="72" fill="#4a5568"/>
+    </g>
+  </g>
+  
+  <!-- Ambient Light Effects -->
+  <ellipse cx="960" cy="200" rx="800" ry="200" fill="url(#heroGrad2)" opacity="0.3"/>
+  <ellipse cx="1400" cy="600" rx="400" ry="300" fill="url(#heroGrad2)" opacity="0.2"/>
 </svg>

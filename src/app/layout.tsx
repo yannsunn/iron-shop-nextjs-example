@@ -36,7 +36,7 @@ export const viewport = {
   initialScale: 1,
 }
 
-import { AppProvider } from '@/context/AppContext'
+import { AppProvider } from '../context/AppContext'
 
 export default function RootLayout({
   children,
