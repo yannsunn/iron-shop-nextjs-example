@@ -14,9 +14,32 @@ interface ImageSliderProps {
 const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width = 600, height = 400 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set())
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
   
   const handleImageError = (index: number) => {
     setImageErrors(prev => new Set([...prev, index]))
+  }
+
+  // スワイプ処理
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+    if (isLeftSwipe) goToNext()
+    if (isRightSwipe) goToPrevious()
   }
 
   const goToPrevious = () => {
@@ -75,7 +98,18 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
   }
 
   return (
-    <div className={cn("relative w-full h-full overflow-hidden", className)} style={{ width: width, height: height }}>
+    <div 
+      className={cn("relative w-full h-full overflow-hidden", className)} 
+      style={{ width: width, height: height }}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'ArrowLeft') goToPrevious()
+        if (e.key === 'ArrowRight') goToNext()
+      }}
+    >
       {/* Image with fallback */}
       <div className="relative w-full h-full">
         {imageErrors.has(currentIndex) ? (
@@ -104,7 +138,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
           <img
             src={images[currentIndex]}
             alt={alt}
-            className="w-full h-full object-cover transition-all duration-500"
+            className="w-full h-full object-contain bg-white transition-all duration-500"
             onError={() => handleImageError(currentIndex)}
           />
         )}
@@ -114,9 +148,13 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
       {images.length > 1 && (
         <>
           <button
-            onClick={goToPrevious}
-            className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors z-10"
-            aria-label="Previous image"
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              goToPrevious()
+            }}
+            className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full hover:bg-black/80 transition-all duration-300 z-20 hover:scale-110"
+            aria-label="前の画像"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -124,9 +162,13 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
 
           </button>
           <button
-            onClick={goToNext}
-            className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors z-10"
-            aria-label="Next image"
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              goToNext()
+            }}
+            className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full hover:bg-black/80 transition-all duration-300 z-20 hover:scale-110"
+            aria-label="次の画像"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5 15.75 12l-7.5 7.5" />
@@ -144,10 +186,14 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
             {images.map((_, index) => (
               <button
                 key={index}
-                onClick={() => goToSlide(index)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  goToSlide(index)
+                }}
                 className={cn(
-                  "w-2 h-2 rounded-full bg-white/60 transition-all duration-300 hover:bg-white/90",
-                  currentIndex === index ? "scale-150 bg-white w-6" : ""
+                  "w-3 h-3 rounded-full bg-white/60 transition-all duration-300 hover:bg-white/90 hover:scale-125",
+                  currentIndex === index ? "scale-150 bg-white w-8" : ""
                 )}
                 aria-label={`画像 ${index + 1} に移動`}
               />
