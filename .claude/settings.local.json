@@ -41,7 +41,10 @@
       "Bash(git config:*)",
       "Bash(git lfs:*)",
       "Bash(grep:*)",
-      "WebFetch(domain:www.iris-oyama.co.jp)"
+      "WebFetch(domain:www.iris-oyama.co.jp)",
+      "Bash(git fetch:*)",
+      "Bash(git remote get-url:*)",
+      "Bash(git rev-parse:*)"
     ],
     "deny": []
   }
