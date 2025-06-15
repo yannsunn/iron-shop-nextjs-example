@@ -31,7 +31,12 @@ const products: Product[] = [
       "5段調整可能",
       "高品質ワイヤーシェルフ"
     ],
-    images: ["/images/product1.jpg"],
+    images: [
+      "/images/products/steel-rack/main.jpg",
+      "/images/products/steel-rack/detail1.jpg", 
+      "/images/products/steel-rack/detail2.jpg",
+      "/images/products/steel-rack/detail3.jpg"
+    ],
     customizable: ["サイズ", "段数", "メッキ仕上げ", "耐荷重"],
     leadTime: "3-4週間",
     badge: "98%満足度"
@@ -46,7 +51,12 @@ const products: Product[] = [
       "焚き火対応設計",
       "アウトドア専用"
     ],
-    images: ["/images/product2.jpg"],
+    images: [
+      "/images/products/fire-table/main.jpg",
+      "/images/products/fire-table/flame.jpg",
+      "/images/products/fire-table/setup.jpg",
+      "/images/products/fire-table/parts.jpg"
+    ],
     customizable: ["サイズ", "プレート厚み", "脚部デザイン", "収納機能"],
     leadTime: "4-5週間",
     badge: "98%満足度"
@@ -61,7 +71,12 @@ const products: Product[] = [
       "コンパクト収納",
       "グリル機能付き"
     ],
-    images: ["/images/product3.jpg"],
+    images: [
+      "/images/products/fire-stand/main.jpg",
+      "/images/products/fire-stand/compact.jpg",
+      "/images/products/fire-stand/grill.jpg",
+      "/images/products/fire-stand/burning.jpg"
+    ],
     customizable: ["燃焼システム", "収納サイズ", "グリル面積", "材質"],
     leadTime: "5-6週間",
     badge: "98%満足度"
@@ -76,7 +91,11 @@ const products: Product[] = [
       "100mm刻みサイズオーダー",
       "マットブラック仕上げ"
     ],
-    images: ["/images/product4.jpg"], 
+    images: [
+      "/images/products/iron-bar/main.jpg",
+      "/images/products/iron-bar/installation.jpg",
+      "/images/products/iron-bar/size-chart.jpg"
+    ], 
     customizable: ["幅サイズ", "高さ", "太さタイプ", "カラー仕上げ"],
     leadTime: "2-3週間",
     badge: "日本製"
@@ -91,7 +110,11 @@ const products: Product[] = [
       "スチール製高耐久",
       "モダンブラック仕上げ"
     ],
-    images: ["/images/product5.jpg"],
+    images: [
+      "/images/products/hanger-bar/main.jpg",
+      "/images/products/hanger-bar/wall-mount.jpg",
+      "/images/products/hanger-bar/ceiling-mount.jpg"
+    ],
     customizable: ["取付方法", "サイズ", "カラー", "エンドキャップ"],
     leadTime: "2-3週間",
     badge: "人気"
@@ -106,7 +129,11 @@ const products: Product[] = [
       "DIY取付簡単",
       "高品質アイアン製"
     ],
-    images: ["/images/product6.jpg"],
+    images: [
+      "/images/products/table-legs/main.jpg",
+      "/images/products/table-legs/pair.jpg",
+      "/images/products/table-legs/structure.jpg"
+    ],
     customizable: ["高さ", "脚幅", "プレート形状", "仕上げ色"],
     leadTime: "3-4週間",
     badge: "DIY向け"
@@ -123,10 +150,10 @@ const products: Product[] = [
       "床への傷を防ぐアジャスター付き"
     ],
     images: [
-      "/images/table_leg_size.jpg",
-      "/images/table_leg_pair.jpg",
-      "/images/table_leg_with_top.jpg",
-      "/images/table_leg_screw_holes.jpg"
+      "/images/products/adjustable-legs/main.jpg",
+      "/images/products/adjustable-legs/adjuster.jpg",
+      "/images/products/adjustable-legs/with-table.jpg",
+      "/images/products/adjustable-legs/holes.jpg"
     ],
     customizable: ["高さ", "幅", "色", "表面仕上げ"],
     leadTime: "2-3週間"

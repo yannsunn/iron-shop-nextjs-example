@@ -136,21 +136,42 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
         </>
       )}
 
-      {/* Dots Indicator */}
+      {/* Enhanced Navigation */}
       {images.length > 1 && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={cn(
-                "w-3 h-3 rounded-full bg-white/70 transition-all duration-300",
-                currentIndex === index ? "scale-125 bg-white" : ""
-              )}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+        <>
+          {/* Dots Indicator */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={cn(
+                  "w-2 h-2 rounded-full bg-white/60 transition-all duration-300 hover:bg-white/90",
+                  currentIndex === index ? "scale-150 bg-white w-6" : ""
+                )}
+                aria-label={`画像 ${index + 1} に移動`}
+              />
+            ))}
+          </div>
+          
+          {/* Image Counter */}
+          <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
+            {currentIndex + 1} / {images.length}
+          </div>
+          
+          {/* Touch/Swipe Indicators */}
+          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 text-white/70 text-xs">
+            <div className="flex items-center gap-1">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+              </svg>
+              <span>スワイプで切り替え</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </>
       )}
     </div>
   )
