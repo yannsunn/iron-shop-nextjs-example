@@ -48,8 +48,10 @@ const Hero = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{ 
-            filter: 'brightness(1.4) contrast(2.0) saturate(1.4) drop-shadow(0 8px 32px rgba(0,0,0,0.4))',
-            boxShadow: 'inset 0 0 100px rgba(0,0,0,0.3)',
+            filter: 'brightness(1.6) contrast(2.2) saturate(1.5) drop-shadow(0 4px 20px rgba(0,0,0,0.6))',
+            boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2)',
+            opacity: 1,
+            zIndex: 5,
           }}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
@@ -61,30 +63,32 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full transform scale-110 transition-transform duration-700"
           style={{ 
             background: `
-              linear-gradient(45deg, #3a3a3a 25%, transparent 25%), 
-              linear-gradient(-45deg, #3a3a3a 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, #3a3a3a 75%), 
-              linear-gradient(-45deg, transparent 75%, #3a3a3a 75%)
+              linear-gradient(45deg, #4a4a4a 25%, transparent 25%), 
+              linear-gradient(-45deg, #4a4a4a 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #4a4a4a 75%), 
+              linear-gradient(-45deg, transparent 75%, #4a4a4a 75%)
             `,
             backgroundSize: '60px 60px',
             backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px',
-            opacity: 0.2
+            opacity: 0.1,
+            zIndex: 1
           }}
         />
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            background: 'radial-gradient(circle at center, rgba(180, 102, 65, 0.2) 0%, rgba(40, 40, 40, 0.6) 100%)',
-            filter: 'blur(1px)'
+            background: 'radial-gradient(circle at center, rgba(200, 122, 85, 0.1) 0%, rgba(60, 60, 60, 0.4) 100%)',
+            filter: 'blur(2px)',
+            zIndex: 2
           }}
         />
       </div>
 
 
-      {/* 最軽量オーバーレイ */}
+      {/* 極軽量オーバーレイ */}
       <div className="absolute inset-0 z-10">
-        <div className="absolute inset-0 bg-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" />
+        <div className="absolute inset-0 bg-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
       </div>
       
       {/* Main content with enhanced animations */}
