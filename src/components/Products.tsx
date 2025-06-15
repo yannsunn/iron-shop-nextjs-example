@@ -67,18 +67,63 @@ const products: Product[] = [
   },
   {
     id: 4,
-    name: "プロフェッショナル工房",
-    description: "本格アイアン工房・鍛冶炉・金床・職人工具一式・オーダーメイド製作環境",
-    category: "建築",
+    name: "天井用アイアンバー【E字型】",
+    description: "幅1500mm-高400mm-太タイプ・マットブラック仕上げ・室内物干し対応・100mm刻みオーダー可能",
+    category: "インテリア",
     features: [
-      "本格鍛冶炉",
-      "プロ仕様金床",
-      "職人工具一式"
+      "日本製・受注生産",
+      "100mm刻みサイズオーダー",
+      "マットブラック仕上げ"
     ],
     image: "/images/product4.jpg", 
-    customizable: ["工房レイアウト", "設備仕様", "工具セット", "安全装置"],
-    leadTime: "8-12週間",
-    badge: "98%満足度"
+    customizable: ["幅サイズ", "高さ", "太さタイプ", "カラー仕上げ"],
+    leadTime: "2-3週間",
+    badge: "日本製"
+  },
+  {
+    id: 5,
+    name: "SQハンガーバー",
+    description: "幅120cm×高さ23cm・マットブラック・天井/壁取付対応・スチール製ハンギングバー",
+    category: "インテリア",
+    features: [
+      "天井/壁両用設計",
+      "スチール製高耐久",
+      "モダンブラック仕上げ"
+    ],
+    image: "/images/product5.jpg",
+    customizable: ["取付方法", "サイズ", "カラー", "エンドキャップ"],
+    leadTime: "2-3週間",
+    badge: "人気"
+  },
+  {
+    id: 6,
+    name: "T型アイアンテーブル脚",
+    description: "高さ67.5cm・2脚1組セット・マットブラック仕上げ・DIY家具用アイアンレッグ",
+    category: "DIYパーツ",
+    features: [
+      "安定のT型構造",
+      "DIY取付簡単",
+      "高品質アイアン製"
+    ],
+    image: "/images/product6.jpg",
+    customizable: ["高さ", "脚幅", "プレート形状", "仕上げ色"],
+    leadTime: "3-4週間",
+    badge: "DIY向け"
+  },
+  {
+    id: 7,
+    name: "口型アイアンレッグ",
+    description: "高さ40cm×奥行36cm・2本セット・アジャスター付属・ダイニング/デスク用テーブル脚",
+    category: "DIYパーツ",
+    features: [
+      "高さ調整アジャスター付",
+      "口型安定構造",
+      "幅広い用途対応"
+    ],
+    image: "/images/product1.jpg",
+    customizable: ["高さ", "奥行き", "天板取付穴", "表面処理"],
+    leadTime: "3-4週間",
+    badge: "ベストセラー"
   }
 ]
 
@@ -115,7 +160,7 @@ const Products = () => {
         </div>
 
         {/* 商品グリッド */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {products.map((product, index) => (
             <div
               key={product.id}

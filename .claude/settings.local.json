@@ -50,7 +50,11 @@
       "WebFetch(domain:amzn.asia)",
       "WebFetch(domain:amzn.asia)",
       "WebFetch(domain:amzn.asia)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "WebFetch(domain:www.amazon.co.jp)",
+      "WebFetch(domain:www.amazon.co.jp)",
+      "WebFetch(domain:www.amazon.co.jp)",
+      "WebFetch(domain:www.amazon.co.jp)"
     ],
     "deny": []
   }
