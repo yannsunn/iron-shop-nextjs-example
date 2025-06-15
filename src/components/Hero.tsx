@@ -50,7 +50,7 @@ const Hero = () => {
           style={{ 
             filter: 'brightness(1.6) contrast(2.2) saturate(1.5) drop-shadow(0 4px 20px rgba(0,0,0,0.6))',
             boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2)',
-            opacity: 0.7,
+            opacity: 1,
             zIndex: 5,
           }}
         >
@@ -58,50 +58,9 @@ const Hero = () => {
           {/* Fallback for browsers that don't support video */}
         </video>
         
-        {/* 深いブルー系背景パターン */}
-        <div 
-          className="absolute inset-0 w-full h-full transform scale-110 transition-transform duration-700"
-          style={{ 
-            background: `
-              linear-gradient(45deg, #1a2332 25%, transparent 25%), 
-              linear-gradient(-45deg, #1a2332 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, #1a2332 75%), 
-              linear-gradient(-45deg, transparent 75%, #1a2332 75%)
-            `,
-            backgroundSize: '60px 60px',
-            backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px',
-            opacity: 0.6,
-            zIndex: 1
-          }}
-        />
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{ 
-            background: 'radial-gradient(circle at center, rgba(45, 82, 139, 0.4) 0%, rgba(10, 15, 25, 0.8) 100%)',
-            filter: 'blur(1px)',
-            zIndex: 2
-          }}
-        />
-        
-        {/* クールトーンの追加レイヤー */}
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{ 
-            background: `
-              linear-gradient(90deg, transparent 0%, rgba(82, 130, 160, 0.1) 50%, transparent 100%),
-              linear-gradient(0deg, transparent 0%, rgba(33, 67, 101, 0.1) 50%, transparent 100%)
-            `,
-            zIndex: 3
-          }}
-        />
       </div>
 
 
-      {/* 軽量オーバーレイ */}
-      <div className="absolute inset-0 z-10">
-        <div className="absolute inset-0 bg-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
-      </div>
       
       {/* Main content with enhanced animations */}
       <div className="relative z-20 text-center max-w-6xl px-6 mx-auto flex flex-col justify-center h-full">
