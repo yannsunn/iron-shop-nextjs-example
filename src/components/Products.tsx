@@ -189,22 +189,7 @@ const Products = () => {
               onMouseLeave={() => setHoveredProduct(null)}
             >
               <Card className="h-full overflow-hidden group relative">
-                {/* カテゴリーバッジ */}
-                <div className="absolute top-4 left-4 z-10">
-                  <div className="px-3 py-1 text-xs font-medium rounded bg-gray-900/80 backdrop-blur-sm text-white">
-                    {product.category}
-                  </div>
-                </div>
                 
-                {/* 満足度バッジ */}
-                {product.badge && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="px-3 py-1 text-xs font-medium rounded bg-green-600/90 backdrop-blur-sm text-white flex items-center gap-1">
-                      <span>✨</span>
-                      <span>{product.badge}</span>
-                    </div>
-                  </div>
-                )}
 
 
                 {/* 商品画像 - モバイル対応拡大 */}
