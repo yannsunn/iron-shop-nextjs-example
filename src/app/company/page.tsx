@@ -16,7 +16,7 @@ const CompanyInfo = () => {
                 会社概要・特定商取引法に基づく表記
               </h1>
               <p className="text-gray-600">
-                アイアンショップの会社情報と特定商取引法に基づく表記をご確認ください。
+                株式会社Awakeの会社情報と特定商取引法に基づく表記をご確認ください。
               </p>
             </div>
 
@@ -34,19 +34,19 @@ const CompanyInfo = () => {
                       <div className="space-y-3">
                         <div>
                           <p className="font-medium text-gray-700">会社名</p>
-                          <p className="text-gray-900">アイアンショップ</p>
+                          <p className="text-gray-900">株式会社Awake</p>
                         </div>
                         <div>
                           <p className="font-medium text-gray-700">代表者</p>
-                          <p className="text-gray-900">代表取締役 鉄工 太郎</p>
+                          <p className="text-gray-900">代表取締役 田形 康貴</p>
                         </div>
                         <div>
-                          <p className="font-medium text-gray-700">創業</p>
-                          <p className="text-gray-900">1984年（創業40年）</p>
+                          <p className="font-medium text-gray-700">設立</p>
+                          <p className="text-gray-900">2024年</p>
                         </div>
                         <div>
-                          <p className="font-medium text-gray-700">従業員数</p>
-                          <p className="text-gray-900">12名（職人8名、事務4名）</p>
+                          <p className="font-medium text-gray-700">事業形態</p>
+                          <p className="text-gray-900">アイアン製品の企画・販売・品質管理</p>
                         </div>
                       </div>
                     </div>
@@ -58,31 +58,31 @@ const CompanyInfo = () => {
                           <svg className="w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span>オーダーメイドアイアン製品の設計・製作</span>
+                          <span>アイアン製品の企画・デザイン</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <svg className="w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span>家具・インテリア用アイアンパーツ製造</span>
+                          <span>オーダーメイド製品の販売・管理</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <svg className="w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span>建築用鉄骨・手すり等の製作</span>
+                          <span>品質管理・アフターサービス</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <svg className="w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span>金属加工・溶接サービス</span>
+                          <span>製造パートナーとの連携・管理</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <svg className="w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          <span>メンテナンス・修理サービス</span>
+                          <span>お客様サポート・コンサルティング</span>
                         </li>
                       </ul>
                     </div>
@@ -93,16 +93,16 @@ const CompanyInfo = () => {
                       <h3 className="font-bold text-amber-800 mb-4 text-lg">所在地・連絡先</h3>
                       <div className="space-y-3">
                         <div>
-                          <p className="font-medium text-gray-700">本社・工場</p>
-                          <p className="text-gray-900">〒000-0000<br />東京都○○区○○町1-2-3</p>
+                          <p className="font-medium text-gray-700">本社所在地</p>
+                          <p className="text-gray-900">〒207-0013<br />東京都東大和市向原5-1129-61<br />渡辺ビル1F</p>
                         </div>
                         <div>
                           <p className="font-medium text-gray-700">電話番号</p>
-                          <p className="text-gray-900">03-0000-0000</p>
+                          <p className="text-gray-900">050-7115-4948</p>
                         </div>
                         <div>
-                          <p className="font-medium text-gray-700">FAX番号</p>
-                          <p className="text-gray-900">03-0000-0001</p>
+                          <p className="font-medium text-gray-700">メールアドレス</p>
+                          <p className="text-gray-900">shop@awakeinc.co.jp</p>
                         </div>
                         <div>
                           <p className="font-medium text-gray-700">営業時間</p>
@@ -112,33 +112,38 @@ const CompanyInfo = () => {
                     </div>
 
                     <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
-                      <h3 className="font-bold text-purple-800 mb-4 text-lg">認証・資格</h3>
-                      <ul className="space-y-2 text-gray-700">
-                        <li className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                          </svg>
-                          <span>ISO9001品質管理認証取得</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                          </svg>
-                          <span>1級溶接技能士在籍</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                          </svg>
-                          <span>建設業許可（鋼構造物工事業）</span>
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                          </svg>
-                          <span>労働安全衛生マネジメント適用</span>
-                        </li>
-                      </ul>
+                      <h3 className="font-bold text-purple-800 mb-4 text-lg">製造パートナー</h3>
+                      <div className="space-y-3">
+                        <div className="bg-white p-4 rounded border border-purple-300">
+                          <h4 className="font-bold text-purple-700 mb-2">株式会社yu's</h4>
+                          <ul className="space-y-1 text-sm text-gray-700">
+                            <li className="flex items-center gap-2">
+                              <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                              </svg>
+                              <span>溶接歴40年超の信頼あるパートナー</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                              </svg>
+                              <span>1級溶接技能士在籍</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                              </svg>
+                              <span>当社厳格な品質管理体制で製作</span>
+                            </li>
+                            <li className="flex items-center gap-2">
+                              <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                              </svg>
+                              <span>10年品質保証付き</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -155,27 +160,32 @@ const CompanyInfo = () => {
                     <div className="space-y-4">
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">販売事業者名</h3>
-                        <p className="text-gray-700">アイアンショップ</p>
+                        <p className="text-gray-700">株式会社Awake</p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">運営責任者</h3>
-                        <p className="text-gray-700">代表取締役 鉄工 太郎</p>
+                        <p className="text-gray-700">代表取締役 田形 康貴</p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">所在地</h3>
-                        <p className="text-gray-700">〒000-0000<br />東京都○○区○○町1-2-3</p>
+                        <p className="text-gray-700">〒207-0013<br />東京都東大和市向原5-1129-61<br />渡辺ビル1F</p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">電話番号</h3>
-                        <p className="text-gray-700">03-0000-0000</p>
+                        <p className="text-gray-700">050-7115-4948</p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">メールアドレス</h3>
-                        <p className="text-gray-700">info@iron-shop.example.com</p>
+                        <p className="text-gray-700">shop@awakeinc.co.jp</p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-bold text-gray-800 mb-2">製造</h3>
+                        <p className="text-gray-700">株式会社yu's（当社品質管理のもと製作）</p>
                       </div>
                     </div>
                     
@@ -255,18 +265,18 @@ const CompanyInfo = () => {
                     <div>
                       <h3 className="font-bold text-blue-800 mb-4 text-lg">電車でお越しの場合</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• JR○○線「○○駅」徒歩12分</li>
-                        <li>• 地下鉄○○線「○○駅」徒歩8分</li>
-                        <li>• バス「○○バス停」徒歩3分</li>
+                        <li>• 西武拝島線「東大和市駅」徒歩15分</li>
+                        <li>• 多摩モノレール「上北台駅」徒歩12分</li>
+                        <li>• バス「向原団地入口」徒歩5分</li>
                       </ul>
                     </div>
                     
                     <div>
                       <h3 className="font-bold text-blue-800 mb-4 text-lg">お車でお越しの場合</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• ○○高速道路「○○IC」より15分</li>
-                        <li>• 駐車場：5台完備（無料）</li>
-                        <li>• 大型車両対応可</li>
+                        <li>• 中央自動車道「国立府中IC」より20分</li>
+                        <li>• 駐車場：近隣コインパーキング利用</li>
+                        <li>• 大型納品車両対応可能</li>
                       </ul>
                     </div>
                   </div>
@@ -274,7 +284,7 @@ const CompanyInfo = () => {
                   <div className="mt-6 p-4 bg-white rounded border border-blue-300">
                     <p className="text-sm text-gray-600">
                       <strong>ご来訪の際は事前にお電話でご連絡ください。</strong><br />
-                      工場見学・製作相談も承っております。職人が直接ご対応いたします。
+                      製品見学・製作相談も承っております。お気軽にお問い合わせください。
                     </p>
                   </div>
                 </div>
