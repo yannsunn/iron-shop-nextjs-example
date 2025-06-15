@@ -16,7 +16,8 @@ const CompanyInfo = () => {
                 会社概要・特定商取引法に基づく表記
               </h1>
               <p className="text-gray-600">
-                株式会社Awakeの会社情報と特定商取引法に基づく表記をご確認ください。
+                Vintage Iron Works Exampleの会社情報と特定商取引法に基づく表記をご確認ください。
+                <span className="text-red-600 font-medium">※これはポートフォリオ用のサンプル情報です</span>
               </p>
             </div>
 
@@ -34,11 +35,11 @@ const CompanyInfo = () => {
                       <div className="space-y-3">
                         <div>
                           <p className="font-medium text-gray-700">会社名</p>
-                          <p className="text-gray-900">株式会社Awake</p>
+                          <p className="text-gray-900">株式会社Example Corporation</p>
                         </div>
                         <div>
                           <p className="font-medium text-gray-700">代表者</p>
-                          <p className="text-gray-900">代表取締役 田形 康貴</p>
+                          <p className="text-gray-900">代表取締役 山田 太郎（サンプル）</p>
                         </div>
                         <div>
                           <p className="font-medium text-gray-700">設立</p>
@@ -94,15 +95,15 @@ const CompanyInfo = () => {
                       <div className="space-y-3">
                         <div>
                           <p className="font-medium text-gray-700">本社所在地</p>
-                          <p className="text-gray-900">〒207-0013<br />東京都東大和市向原5-1129-61<br />渡辺ビル1F</p>
+                          <p className="text-gray-900">〒100-0001<br />東京都千代田区千代田1-1-1<br />エグザンプルビル3F</p>
                         </div>
                         <div>
                           <p className="font-medium text-gray-700">電話番号</p>
-                          <p className="text-gray-900">050-7115-4948</p>
+                          <p className="text-gray-900">03-1234-5678（サンプル）</p>
                         </div>
                         <div>
                           <p className="font-medium text-gray-700">メールアドレス</p>
-                          <p className="text-gray-900">shop@awakeinc.co.jp</p>
+                          <p className="text-gray-900">info@example-ironshop.com</p>
                         </div>
                         <div>
                           <p className="font-medium text-gray-700">営業時間</p>
@@ -115,7 +116,7 @@ const CompanyInfo = () => {
                       <h3 className="font-bold text-purple-800 mb-4 text-lg">製造パートナー</h3>
                       <div className="space-y-3">
                         <div className="bg-white p-4 rounded border border-purple-300">
-                          <h4 className="font-bold text-purple-700 mb-2">株式会社yu&apos;s</h4>
+                          <h4 className="font-bold text-purple-700 mb-2">株式会社Example Works <span className="text-red-600 text-sm font-normal">（架空）</span></h4>
                           <ul className="space-y-1 text-sm text-gray-700">
                             <li className="flex items-center gap-2">
                               <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
@@ -160,32 +161,32 @@ const CompanyInfo = () => {
                     <div className="space-y-4">
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">販売事業者名</h3>
-                        <p className="text-gray-700">株式会社Awake</p>
+                        <p className="text-gray-700">株式会社Example Corporation <span className="text-red-600 text-sm">（架空）</span></p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">運営責任者</h3>
-                        <p className="text-gray-700">代表取締役 田形 康貴</p>
+                        <p className="text-gray-700">代表取締役 山田 太郎 <span className="text-red-600 text-sm">（架空）</span></p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">所在地</h3>
-                        <p className="text-gray-700">〒207-0013<br />東京都東大和市向原5-1129-61<br />渡辺ビル1F</p>
+                        <p className="text-gray-700">〒100-0001<br />東京都千代田区千代田1-1-1<br />エグザンプルビル3F <span className="text-red-600 text-sm">（架空）</span></p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">電話番号</h3>
-                        <p className="text-gray-700">050-7115-4948</p>
+                        <p className="text-gray-700">03-1234-5678 <span className="text-red-600 text-sm">（架空）</span></p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">メールアドレス</h3>
-                        <p className="text-gray-700">shop@awakeinc.co.jp</p>
+                        <p className="text-gray-700">info@example-ironshop.com <span className="text-red-600 text-sm">（架空）</span></p>
                       </div>
                       
                       <div>
                         <h3 className="font-bold text-gray-800 mb-2">製造</h3>
-                        <p className="text-gray-700">株式会社yu&apos;s（当社品質管理のもと製作）</p>
+                        <p className="text-gray-700">株式会社Example Works（当社品質管理のもと製作）<span className="text-red-600 text-sm">（架空）</span></p>
                       </div>
                     </div>
                     
@@ -265,18 +266,18 @@ const CompanyInfo = () => {
                     <div>
                       <h3 className="font-bold text-blue-800 mb-4 text-lg">電車でお越しの場合</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• 西武拝島線「東大和市駅」徒歩15分</li>
-                        <li>• 多摩モノレール「上北台駅」徒歩12分</li>
-                        <li>• バス「向原団地入口」徒歩5分</li>
+                        <li>• JR山手線「東京駅」徒歩5分 <span className="text-red-600 text-sm">（サンプル）</span></li>
+                        <li>• 東京メトロ丸ノ内線「大手町駅」徒歩3分 <span className="text-red-600 text-sm">（サンプル）</span></li>
+                        <li>• 都営三田線「日比谷駅」徒歩7分 <span className="text-red-600 text-sm">（サンプル）</span></li>
                       </ul>
                     </div>
                     
                     <div>
                       <h3 className="font-bold text-blue-800 mb-4 text-lg">お車でお越しの場合</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• 中央自動車道「国立府中IC」より20分</li>
-                        <li>• 駐車場：近隣コインパーキング利用</li>
-                        <li>• 大型納品車両対応可能</li>
+                        <li>• 首都高速「江戸橋出口」より5分 <span className="text-red-600 text-sm">（サンプル）</span></li>
+                        <li>• 駐車場：地下駐車場完備 <span className="text-red-600 text-sm">（サンプル）</span></li>
+                        <li>• バレーパーキング対応 <span className="text-red-600 text-sm">（サンプル）</span></li>
                       </ul>
                     </div>
                   </div>
@@ -285,6 +286,22 @@ const CompanyInfo = () => {
                     <p className="text-sm text-gray-600">
                       <strong>ご来訪の際は事前にお電話でご連絡ください。</strong><br />
                       製品見学・製作相談も承っております。お気軽にお問い合わせください。
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              {/* 免責事項 */}
+              <section className="mt-12 bg-red-50 p-6 rounded-lg border-2 border-red-300">
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <h3 className="font-bold text-red-800 text-lg mb-2">重要なお知らせ</h3>
+                    <p className="text-red-700">
+                      このページに記載されているすべての情報は、<strong>ポートフォリオ展示用のサンプルデータ</strong>です。
+                      実在の会社、人物、住所、連絡先ではありません。実際のビジネスには使用できません。
                     </p>
                   </div>
                 </div>
