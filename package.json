@@ -13,7 +13,9 @@
     "build:analyze": "npm run build && npm run analyze",
     "clean": "rm -rf .next out",
     "precommit": "npm run lint && npm run type-check",
-    "deploy": "git add . && git commit -m 'Deploy updates' && git push origin main"
+    "deploy": "git add . && git commit -m 'Deploy updates' && git push origin main",
+    "save": "git add -A && git commit -m 'Auto-save changes' && git push origin main",
+    "quick-push": "git add -A && git commit -m '🚀 Quick update' && git push origin main"
   },
   "dependencies": {
     "clsx": "^2.1.1",
