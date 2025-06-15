@@ -207,8 +207,8 @@ const Products = () => {
                 )}
 
 
-                {/* 商品画像 - サイズ拡大 */}
-                <div className="relative h-96 overflow-hidden rounded-t-lg">
+                {/* 商品画像 - 最適サイズ */}
+                <div className="relative h-80 overflow-hidden rounded-t-lg">
                   <ImageSlider 
                     images={product.images}
                     alt={product.name}
@@ -216,8 +216,8 @@ const Products = () => {
                       "w-full h-full transition-transform duration-700 rounded-t-lg",
                       hoveredProduct === product.id && "scale-105"
                     )}
-                    width={400}
-                    height={384}
+                    width={380}
+                    height={320}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </div>
