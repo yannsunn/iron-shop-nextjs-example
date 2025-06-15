@@ -22,91 +22,63 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: "インダストリアルブックシェルフ",
-    description: "アイアンフレームと天然木を組み合わせた、機能性とデザイン性を兼ね備えたブックシェルフ",
-    category: "収納家具",
+    name: "プレミアムスチールラック",  
+    description: "アイリス大山風の高品質クロームメッキ仕上げ・5段調整可能ワイヤーシェルフ",
+    category: "家具",
     features: [
-      "耐荷重80kg（棚板1枚あたり）",
+      "クロームメッキ仕上げ",
       "5段調整可能",
-      "アンティーク風仕上げ"
+      "高品質ワイヤーシェルフ"
     ],
     image: "/images/product1.jpg",
-    customizable: ["サイズ", "棚板枚数", "仕上げ色", "材質"],
+    customizable: ["サイズ", "段数", "メッキ仕上げ", "耐荷重"],
     leadTime: "3-4週間",
-    badge: "人気"
+    badge: "98%満足度"
   },
   {
     id: 2,
-    name: "モダンコーヒーテーブル",
-    description: "ガラス天板とスチールベースの洗練されたデザイン。リビングの主役となるモダンテーブル",
-    category: "テーブル",
+    name: "テキーラファイヤーテーブル",
+    description: "DOD風テキーラファイヤーテーブル・3mm厚アイアンプレート・焚き火対応テーブル・アウトドア＆キャンプ用",
+    category: "カスタム",
     features: [
-      "強化ガラス天板",
-      "スタイリッシュなスチール脚",
-      "安定性抜群の設計"
+      "3mm厚アイアンプレート",
+      "焚き火対応設計",
+      "アウトドア専用"
     ],
     image: "/images/product2.jpg",
-    customizable: ["天板サイズ", "脚部デザイン", "ガラス種類", "高さ"],
-    leadTime: "4-5週間"
+    customizable: ["サイズ", "プレート厚み", "脚部デザイン", "収納機能"],
+    leadTime: "4-5週間",
+    badge: "98%満足度"
   },
   {
     id: 3,
-    name: "ヴィンテージバーカート",
-    description: "真鍮装飾とワインラック付きの本格的なバーカート。パーティーシーンを格上げします",
-    category: "カート・ワゴン",
+    name: "すけもえファイヤー焚き火台",
+    description: "DOD風二次燃焼システム・コンパクト収納・グリル機能付き焚き火台",
+    category: "カスタム", 
     features: [
-      "ワインボトル6本収納",
-      "移動式キャスター付き",
-      "真鍮装飾パーツ"
+      "二次燃焼システム",
+      "コンパクト収納",
+      "グリル機能付き"
     ],
     image: "/images/product3.jpg",
-    customizable: ["収納容量", "装飾デザイン", "キャスター", "仕上げ"],
+    customizable: ["燃焼システム", "収納サイズ", "グリル面積", "材質"],
     leadTime: "5-6週間",
-    badge: "限定"
+    badge: "98%満足度"
   },
   {
     id: 4,
-    name: "ミニマルデスクランプ",
-    description: "調整可能なアームとLED照明を搭載したシンプルで機能的なデスクランプ",
-    category: "照明器具",
+    name: "プロフェッショナル工房",
+    description: "本格アイアン工房・鍛冶炉・金床・職人工具一式・オーダーメイド製作環境",
+    category: "建築",
     features: [
-      "無段階角度調整",
-      "LED電球対応",
-      "安定したベース設計"
+      "本格鍛冶炉",
+      "プロ仕様金床",
+      "職人工具一式"
     ],
-    image: "/images/product4.jpg",
-    customizable: ["アーム長", "ベースサイズ", "仕上げ色", "照明タイプ"],
-    leadTime: "2-3週間"
-  },
-  {
-    id: 5,
-    name: "ハンドメイドウォールアート",
-    description: "抽象幾何学デザインの壁掛けアート。空間に洗練されたアクセントを加えます",
-    category: "装飾・アート",
-    features: [
-      "完全ハンドメイド",
-      "抽象幾何学デザイン",
-      "壁掛け金具付き"
-    ],
-    image: "/images/product5.jpg",
-    customizable: ["サイズ", "デザインパターン", "色調", "フレーム"],
-    leadTime: "6-8週間",
-    badge: "アート"
-  },
-  {
-    id: 6,
-    name: "プレミアムキッチンスタンド",
-    description: "大理石天板とステンレスフレームのプロ仕様キッチンスタンド。収納力と美しさを両立",
-    category: "キッチン用品",
-    features: [
-      "天然大理石天板",
-      "ステンレス製フレーム",
-      "プロ仕様の収納設計"
-    ],
-    image: "/images/product6.jpg",
-    customizable: ["天板材質", "サイズ", "収納オプション", "高さ調整"],
-    leadTime: "4-6週間",
-    badge: "プロ仕様"
+    image: "/images/product4.jpg", 
+    customizable: ["工房レイアウト", "設備仕様", "工具セット", "安全装置"],
+    leadTime: "8-12週間",
+    badge: "98%満足度"
   }
 ]
 
@@ -130,19 +102,20 @@ const Products = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            <span className="font-thin text-gray-800">オーダーメイド</span>
+            <span className="font-thin text-gray-800">プレミアム</span>
             <span className="block mt-2 font-bold text-gray-900">
-              アイアン製品カタログ
+              コレクション
             </span>
           </h2>
           
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            すべて完全オーダーメイド制作。お客様のご要望に合わせて、世界に一つだけの作品をお作りします。
+            長年の経験と精密な技術が生み出す、唯一無二のアイアン作品。<br />
+            お客様の空間に合わせたオーダーメイドの美しさをご覧ください。
           </p>
         </div>
 
         {/* 商品グリッド */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {products.map((product, index) => (
             <div
               key={product.id}
@@ -162,11 +135,12 @@ const Products = () => {
                   </div>
                 </div>
                 
-                {/* 特別バッジ */}
+                {/* 満足度バッジ */}
                 {product.badge && (
                   <div className="absolute top-4 right-4 z-10">
-                    <div className="px-3 py-1 text-xs font-medium rounded bg-blue-600/90 backdrop-blur-sm text-white">
-                      {product.badge}
+                    <div className="px-3 py-1 text-xs font-medium rounded bg-green-600/90 backdrop-blur-sm text-white flex items-center gap-1">
+                      <span>✨</span>
+                      <span>{product.badge}</span>
                     </div>
                   </div>
                 )}
@@ -240,15 +214,23 @@ const Products = () => {
                     </div>
                   </div>
 
-                  {/* お問い合わせボタン */}
-                  <div className="pt-4">
+                  {/* アクションボタン */}
+                  <div className="pt-4 flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="md"
+                      className="flex-1"
+                      onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                      詳細を見る →
+                    </Button>
                     <Button
                       variant="primary"
                       size="md"
-                      className="w-full"
+                      className="flex-1"
                       onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                     >
-                      制作のご相談
+                      オーダー相談
                     </Button>
                   </div>
                 </div>
@@ -257,43 +239,55 @@ const Products = () => {
           ))}
         </div>
 
-        {/* オーダーメイドご案内セクション */}
+        {/* あなただけの特別な作品セクション */}
         <div className={cn(
-          "mt-16 p-8 bg-blue-50 rounded-lg border border-blue-200 text-center transition-all duration-1000",
+          "mt-16 p-8 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl border border-amber-200 text-center transition-all duration-1000",
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         )}
         style={{ transitionDelay: "400ms" }}
         >
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              オーダーメイド制作について
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">
+              あなただけの特別な作品を
             </h3>
-            <p className="text-lg text-gray-700 mb-6">
-              すべての作品は完全オーダーメイドです。サイズ、デザイン、仕上げなど、<br />
-              お客様のご要望に合わせて一点ものをお作りします。
+            <p className="text-xl text-gray-700 mb-8">
+              すべてオーダーメイドで製作いたします。<br />
+              ご希望のデザインやサイズをお聞かせください。
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-sm">
-              <div className="bg-white p-4 rounded-lg">
-                <div className="font-semibold text-gray-800 mb-2">① ご相談</div>
-                <div className="text-gray-600">お客様のご要望をお聞かせください</div>
+            
+            {/* 制作プロセス */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-amber-100">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-amber-600 font-bold text-lg">①</span>
+                </div>
+                <div className="font-bold text-gray-800 mb-2">ご相談</div>
+                <div className="text-gray-600 text-sm">お客様のご要望をお聞かせください</div>
               </div>
-              <div className="bg-white p-4 rounded-lg">
-                <div className="font-semibold text-gray-800 mb-2">② お見積もり</div>
-                <div className="text-gray-600">詳細な仕様と価格をご提案します</div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-amber-100">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-amber-600 font-bold text-lg">②</span>
+                </div>
+                <div className="font-bold text-gray-800 mb-2">お見積もり</div>
+                <div className="text-gray-600 text-sm">詳細な仕様と価格をご提案します</div>
               </div>
-              <div className="bg-white p-4 rounded-lg">
-                <div className="font-semibold text-gray-800 mb-2">③ 制作</div>
-                <div className="text-gray-600">職人が丁寧にお作りします</div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-amber-100">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-amber-600 font-bold text-lg">③</span>
+                </div>
+                <div className="font-bold text-gray-800 mb-2">制作</div>
+                <div className="text-gray-600 text-sm">職人が丁寧にお作りします</div>
               </div>
             </div>
+            
             <div className="flex justify-center">
               <Button
                 variant="primary"
                 size="lg"
-                className="px-8"
+                className="px-10 py-4 text-lg bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                オーダーメイドのご相談
+                オーダー相談・お問い合わせ
               </Button>
             </div>
           </div>
