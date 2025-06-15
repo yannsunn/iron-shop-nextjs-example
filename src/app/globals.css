@@ -7,12 +7,25 @@
     @apply box-border;
   }
   
+  /* モバイル最適化用スタイル */
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
   body {
     @apply font-sans leading-relaxed text-gray-800 antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;
+  }
+  
+  /* モバイルでのタッチターゲット最小サイズ確保 */
+  button, a {
+    @apply min-h-[44px] sm:min-h-0;
   }
 }
 

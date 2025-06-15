@@ -37,7 +37,7 @@ const Hero = () => {
       ref={sectionRef}
       id="home" 
       className="relative h-screen text-white overflow-hidden"
-      style={{ paddingTop: '80px' }}
+      style={{ paddingTop: '60px' }}
     >
       {/* Enhanced background with parallax effect */}
       <div className="absolute inset-0 z-0">
@@ -83,9 +83,9 @@ const Hero = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 tracking-tight text-white leading-none">
-            <span className="block mb-4 font-thin">最高品質の</span>
-            <span className="block font-bold text-6xl md:text-8xl lg:text-9xl">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light mb-6 sm:mb-8 tracking-tight text-white leading-tight">
+            <span className="block mb-2 sm:mb-4 font-thin text-2xl sm:text-3xl md:text-5xl">最高品質の</span>
+            <span className="block font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl">
               アイアン製品
             </span>
           </h1>
@@ -102,8 +102,8 @@ const Hero = () => {
           </div>
 
           {/* シンプルで洗練された価値提案 */}
-          <div className="mb-12">
-            <p className="text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto text-gray-200 mb-8">
+          <div className="mb-8 sm:mb-12">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-3xl mx-auto text-gray-200 mb-4 sm:mb-8 px-4">
               40年の職人技が生み出す、一生モノの品質と美しさ
             </p>
             
@@ -122,20 +122,20 @@ const Hero = () => {
 
           {/* 洗練されたCTA */}
           <div className="space-y-8">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
               <Button
                 variant="primary"
-                size="xl"
+                size="lg"
                 onClick={scrollToGallery}
-                className="bg-white text-black hover:bg-gray-100 px-8 py-4 font-medium tracking-wide transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-auto bg-white text-black hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 font-medium tracking-wide transition-all duration-300 hover:scale-105 text-sm sm:text-base"
               >
                 作品を見る
               </Button>
               
               <Button
                 variant="outline"
-                size="lg"
-                className="border-white/40 text-white hover:bg-white/10"
+                size="md"
+                className="w-full sm:w-auto border-white/40 text-white hover:bg-white/10 text-sm sm:text-base"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 職人について
@@ -144,11 +144,11 @@ const Hero = () => {
 
             
             {/* 控えめな信頼性指標 */}
-            <div className="flex justify-center gap-8 text-sm text-gray-400">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-gray-400 px-4">
               <span>品質保証10年</span>
-              <span>•</span>
+              <span className="hidden sm:inline">•</span>
               <span>全国配送対応</span>
-              <span>•</span>
+              <span className="hidden sm:inline">•</span>
               <span>オーダーメイド可</span>
             </div>
           </div>
