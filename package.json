@@ -10,8 +10,6 @@
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
     "analyze": "ANALYZE=true next build",
-    "perf:budget": "node scripts/check-performance-budget.js",
-    "perf:audit": "npx lighthouse http://localhost:3000 --output=json --output-path=lighthouse-report.json",
     "build:analyze": "npm run build && npm run analyze",
     "clean": "rm -rf .next out",
     "precommit": "npm run lint && npm run type-check",

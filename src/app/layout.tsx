@@ -36,8 +36,6 @@ export const viewport = {
   initialScale: 1,
 }
 
-import { AppProvider } from '../context/AppContext'
-
 export default function RootLayout({
   children,
 }: {
@@ -47,11 +45,9 @@ export default function RootLayout({
     <html lang="ja">
       <head />
       <body className="font-sans leading-relaxed text-gray-800 antialiased">
-        <AppProvider>
-          <main className="min-h-screen">
-            {children}
-          </main>
-        </AppProvider>
+        <main className="min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   )

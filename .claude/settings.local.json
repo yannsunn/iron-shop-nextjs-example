@@ -44,7 +44,13 @@
       "WebFetch(domain:www.iris-oyama.co.jp)",
       "Bash(git fetch:*)",
       "Bash(git remote get-url:*)",
-      "Bash(git rev-parse:*)"
+      "Bash(git rev-parse:*)",
+      "WebFetch(domain:www.mercari.com)",
+      "WebFetch(domain:amzn.asia)",
+      "WebFetch(domain:amzn.asia)",
+      "WebFetch(domain:amzn.asia)",
+      "WebFetch(domain:amzn.asia)",
+      "Bash(rg:*)"
     ],
     "deny": []
   }
