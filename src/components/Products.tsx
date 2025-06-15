@@ -175,8 +175,8 @@ const Products = () => {
           </p>
         </div>
 
-        {/* 商品グリッド */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* 商品グリッド - レスポンシブ最適化 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 max-w-8xl mx-auto">
           {products.map((product, index) => (
             <div
               key={product.id}
@@ -207,8 +207,8 @@ const Products = () => {
                 )}
 
 
-                {/* 商品画像 - 最適サイズ */}
-                <div className="relative h-80 overflow-hidden rounded-t-lg">
+                {/* 商品画像 - モバイル対応拡大 */}
+                <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 overflow-hidden rounded-t-lg">
                   <ImageSlider 
                     images={product.images}
                     alt={product.name}
@@ -216,8 +216,6 @@ const Products = () => {
                       "w-full h-full transition-transform duration-700 rounded-t-lg",
                       hoveredProduct === product.id && "scale-105"
                     )}
-                    width={380}
-                    height={320}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </div>
