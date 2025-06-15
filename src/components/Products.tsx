@@ -24,7 +24,7 @@ const products: Product[] = [
   {
     id: 1,
     name: "アジャスタブルテーブル脚",  
-    description: "72cm調整可能なアイアンテーブル脚・アジャスター機能付き・DIY家具製作に最適",
+    description: "高さ72-72.5cm調整可能・28mm太径パイプ使用・アジャスター機能付き・DIY家具製作に最適",
     category: "DIYパーツ",
     features: [
       "72-72.5cm高さ調整可能",
@@ -44,7 +44,7 @@ const products: Product[] = [
   {
     id: 2,
     name: "アイアンフレーム・キューブテーブル脚",
-    description: "スクエアデザインのアイアンフレーム・2脚セット・モダンなキューブ型構造",
+    description: "幅40×奥行40×高さ70cm・スクエアデザイン・2脚セット・モダンなキューブ型構造",
     category: "テーブル脚",
     features: [
       "安定したキューブ構造",
@@ -64,7 +64,7 @@ const products: Product[] = [
   {
     id: 3,
     name: "コンパクトアイアンテーブル脚",
-    description: "67.7cm×40cm×50cm・コンパクト設計・サイドテーブル・カフェテーブル用脚",
+    description: "サイズ67.7(H)×40(W)×50(D)cm・コンパクト設計・サイドテーブル・カフェテーブル用脚",
     category: "テーブル脚", 
     features: [
       "コンパクト67.7cm高",
@@ -84,7 +84,7 @@ const products: Product[] = [
   {
     id: 4,
     name: "Xデザインテーブル脚",
-    description: "クロスデザインのX型アイアンテーブル脚・2脚セット・ダイニングテーブル用・スタイリッシュデザイン",
+    description: "高さ72cm・幅60cm・クロスデザインのX型アイアンテーブル脚・2脚セット・ダイニングテーブル用",
     category: "テーブル脚",
     features: [
       "スタイリッシュX型構造",
@@ -104,7 +104,7 @@ const products: Product[] = [
   {
     id: 5,
     name: "サイドテーブル・C型アイアンフレーム",
-    description: "55×35×65cm・耐荷重35kg・ソファサイド用コンパクトテーブル・ヴィンテージ木目天板",
+    description: "サイズ55(W)×35(D)×65(H)cm・耐荷重35kg・ソファサイド用コンパクトテーブル・ヴィンテージ木目天板",
     category: "サイドテーブル",
     features: [
       "C型アイアンフレーム",
@@ -124,7 +124,7 @@ const products: Product[] = [
   {
     id: 6,
     name: "スクエアタイプ・2段シェルフ", 
-    description: "50×50×50cm・耐荷重100kg(上段)、50kg(下段)・ヴィンテージ木目シェルフ・防錆加工",
+    description: "サイズ50(W)×50(D)×50(H)cm・耐荷重100kg(上段)・50kg(下段)・ヴィンテージ木目シェルフ・防錆加工",
     category: "シェルフ",
     features: [
       "高耐荷重設計(100kg+50kg)",
@@ -207,17 +207,19 @@ const Products = () => {
                 )}
 
 
-                {/* 商品画像 */}
-                <div className="relative h-80 overflow-hidden">
+                {/* 商品画像 - サイズ拡大 */}
+                <div className="relative h-96 overflow-hidden rounded-t-lg">
                   <ImageSlider 
                     images={product.images}
                     alt={product.name}
                     className={cn(
-                      "w-full h-full object-cover transition-transform duration-700",
-                      hoveredProduct === product.id && "scale-110"
+                      "w-full h-full transition-transform duration-700 rounded-t-lg",
+                      hoveredProduct === product.id && "scale-105"
                     )}
+                    width={400}
+                    height={384}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </div>
 
                 {/* 商品情報 */}
@@ -227,9 +229,17 @@ const Products = () => {
                     {product.name}
                   </h3>
                   
-                  <p className="text-gray-600">
-                    {product.description}
-                  </p>
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-200 mb-4">
+                    <h4 className="text-sm font-bold text-blue-800 mb-2 flex items-center gap-2">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                      製品仕様
+                    </h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {product.description}
+                    </p>
+                  </div>
 
                   {/* 主要特徴 */}
                   <ul className="space-y-2 mb-4">
@@ -244,11 +254,17 @@ const Products = () => {
                   </ul>
                   
                   {/* カスタマイズ可能項目 */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-gray-800 mb-2">カスタマイズ可能</h4>
-                    <div className="flex flex-wrap gap-1">
+                  <div className="mb-4 bg-amber-50 p-3 rounded-lg border border-amber-200">
+                    <h4 className="text-sm font-bold text-amber-800 mb-2 flex items-center gap-2">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM5.05 13.536a1 1 0 001.414 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707zM15.657 14.243a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707z"/>
+                        <path d="M9 12a3 3 0 116 0 3 3 0 01-6 0z"/>
+                      </svg>
+                      カスタマイズオプション
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
                       {product.customizable.map((item, idx) => (
-                        <span key={idx} className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">
+                        <span key={idx} className="px-3 py-1 text-xs bg-white text-amber-700 rounded-full border border-amber-300 font-medium">
                           {item}
                         </span>
                       ))}
@@ -256,8 +272,13 @@ const Products = () => {
                   </div>
                   
                   {/* 制作期間 */}
-                  <div className="text-sm text-gray-600">
-                    <span className="font-medium">制作期間：</span>{product.leadTime}
+                  <div className="bg-green-50 p-3 rounded-lg border border-green-200 text-sm">
+                    <div className="flex items-center gap-2 text-green-800">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-bold">制作期間：{product.leadTime}</span>
+                    </div>
                   </div>
 
                   {/* オーダーメイド価格 */}

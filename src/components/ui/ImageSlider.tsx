@@ -16,6 +16,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set())
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
   
   const handleImageError = (index: number) => {
     setImageErrors(prev => new Set([...prev, index]))
@@ -138,13 +139,20 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
           <img
             src={images[currentIndex]}
             alt={alt}
-            className="w-full h-full object-contain bg-white transition-all duration-500"
+            className="w-full h-full object-cover transition-all duration-500 cursor-pointer hover:scale-105"
             onError={() => handleImageError(currentIndex)}
+            onLoad={() => setIsImageLoaded(true)}
+            onClick={() => {
+              // 画像クリックで次の画像に移動
+              if (images.length > 1) {
+                goToNext()
+              }
+            }}
           />
         )}
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Enhanced Navigation Arrows */}
       {images.length > 1 && (
         <>
           <button
@@ -153,13 +161,12 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
               e.stopPropagation()
               goToPrevious()
             }}
-            className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full hover:bg-black/80 transition-all duration-300 z-20 hover:scale-110"
+            className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/90 text-gray-800 p-4 rounded-full hover:bg-white hover:scale-110 transition-all duration-300 z-30 shadow-lg border-2 border-white/20"
             aria-label="前の画像"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-</svg>
-
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
           </button>
           <button
             onClick={(e) => {
@@ -167,13 +174,12 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
               e.stopPropagation()
               goToNext()
             }}
-            className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full hover:bg-black/80 transition-all duration-300 z-20 hover:scale-110"
+            className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/90 text-gray-800 p-4 rounded-full hover:bg-white hover:scale-110 transition-all duration-300 z-30 shadow-lg border-2 border-white/20"
             aria-label="次の画像"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5 15.75 12l-7.5 7.5" />
-</svg>
-
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5 15.75 12l-7.5 7.5" />
+            </svg>
           </button>
         </>
       )}
@@ -181,8 +187,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
       {/* Enhanced Navigation */}
       {images.length > 1 && (
         <>
-          {/* Dots Indicator */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+          {/* Enhanced Dots Indicator */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3 z-30 bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -192,26 +198,28 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, className, width
                   goToSlide(index)
                 }}
                 className={cn(
-                  "w-3 h-3 rounded-full bg-white/60 transition-all duration-300 hover:bg-white/90 hover:scale-125",
-                  currentIndex === index ? "scale-150 bg-white w-8" : ""
+                  "w-4 h-4 rounded-full transition-all duration-300 hover:scale-125 border-2 border-white/30",
+                  currentIndex === index 
+                    ? "scale-125 bg-white shadow-lg" 
+                    : "bg-white/50 hover:bg-white/80"
                 )}
                 aria-label={`画像 ${index + 1} に移動`}
               />
             ))}
           </div>
           
-          {/* Image Counter */}
-          <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
+          {/* Enhanced Image Counter */}
+          <div className="absolute top-4 right-4 bg-white/90 text-gray-800 px-4 py-2 rounded-full text-sm font-bold backdrop-blur-sm shadow-lg border border-white/50 z-30">
             {currentIndex + 1} / {images.length}
           </div>
           
           {/* Touch/Swipe Indicators */}
-          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 text-white/70 text-xs">
-            <div className="flex items-center gap-1">
+          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 text-white/90 text-xs z-20">
+            <div className="flex items-center gap-2 bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
               </svg>
-              <span>スワイプで切り替え</span>
+              <span className="font-medium">スワイプ・クリックで切り替え</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
