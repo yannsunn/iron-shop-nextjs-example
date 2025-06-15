@@ -23,82 +23,83 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: "プレミアムスチールラック",  
-    description: "アイリス大山風の高品質クロームメッキ仕上げ・5段調整可能ワイヤーシェルフ",
-    category: "家具",
+    name: "アジャスタブルテーブル脚",  
+    description: "72cm調整可能なアイアンテーブル脚・アジャスター機能付き・DIY家具製作に最適",
+    category: "DIYパーツ",
     features: [
-      "クロームメッキ仕上げ",
-      "5段調整可能",
-      "高品質ワイヤーシェルフ"
+      "72-72.5cm高さ調整可能",
+      "28mm太径パイプ使用",
+      "安定したアジャスター機構"
     ],
     images: [
-      "/images/products/steel-rack/main.jpg",
-      "/images/products/steel-rack/detail1.jpg", 
-      "/images/products/steel-rack/detail2.jpg",
-      "/images/products/steel-rack/detail3.jpg"
+      "/images/products/steel-rack/419WeqfrCbL._AC_.jpg",
+      "/images/products/steel-rack/51A6IU7ypNL._AC_.jpg", 
+      "/images/products/steel-rack/51ID3dmkl-L._AC_SL1200_.jpg",
+      "/images/products/steel-rack/51vl4pkF2WL._AC_.jpg"
     ],
-    customizable: ["サイズ", "段数", "メッキ仕上げ", "耐荷重"],
-    leadTime: "3-4週間",
-    badge: "98%満足度"
+    customizable: ["高さ範囲", "パイプ径", "アジャスター", "表面処理"],
+    leadTime: "2-3週間",
+    badge: "DIY推奨"
   },
   {
     id: 2,
-    name: "テキーラファイヤーテーブル",
-    description: "DOD風テキーラファイヤーテーブル・3mm厚アイアンプレート・焚き火対応テーブル・アウトドア＆キャンプ用",
-    category: "カスタム",
+    name: "アイアンフレーム・キューブテーブル脚",
+    description: "スクエアデザインのアイアンフレーム・2脚セット・モダンなキューブ型構造",
+    category: "テーブル脚",
     features: [
-      "3mm厚アイアンプレート",
-      "焚き火対応設計",
-      "アウトドア専用"
+      "安定したキューブ構造",
+      "2脚1セット",
+      "モダンスクエアデザイン"
     ],
     images: [
-      "/images/products/fire-table/main.jpg",
-      "/images/products/fire-table/flame.jpg",
-      "/images/products/fire-table/setup.jpg",
-      "/images/products/fire-table/parts.jpg"
+      "/images/products/fire-table/51FVJ0CW-RL._AC_SL1200_.jpg",
+      "/images/products/fire-table/61+wtcZUAzL._AC_SL1400_.jpg",
+      "/images/products/fire-table/61bniUHZ3nL._AC_SL1376_.jpg",
+      "/images/products/fire-table/71kkNPS7wmL._AC_SL1500_.jpg"
     ],
-    customizable: ["サイズ", "プレート厚み", "脚部デザイン", "収納機能"],
-    leadTime: "4-5週間",
-    badge: "98%満足度"
+    customizable: ["サイズ", "高さ", "フレーム太さ", "表面仕上げ"],
+    leadTime: "3-4週間",
+    badge: "モダン"
   },
   {
     id: 3,
-    name: "すけもえファイヤー焚き火台",
-    description: "DOD風二次燃焼システム・コンパクト収納・グリル機能付き焚き火台",
-    category: "カスタム", 
+    name: "コンパクトアイアンテーブル脚",
+    description: "67.7cm×40cm×50cm・コンパクト設計・サイドテーブル・カフェテーブル用脚",
+    category: "テーブル脚", 
     features: [
-      "二次燃焼システム",
-      "コンパクト収納",
-      "グリル機能付き"
+      "コンパクト67.7cm高",
+      "40×50cmベース",
+      "軽量アイアン構造"
     ],
     images: [
-      "/images/products/fire-stand/main.jpg",
-      "/images/products/fire-stand/compact.jpg",
-      "/images/products/fire-stand/grill.jpg",
-      "/images/products/fire-stand/burning.jpg"
+      "/images/products/fire-stand/41kOCXU0DGL._AC_.jpg",
+      "/images/products/fire-stand/41EhvKcfG9L._AC_.jpg",
+      "/images/products/fire-stand/51IWiJVAdbL._AC_.jpg",
+      "/images/products/fire-stand/61HV3jgR3TL._AC_SL1500_.jpg"
     ],
-    customizable: ["燃焼システム", "収納サイズ", "グリル面積", "材質"],
-    leadTime: "5-6週間",
-    badge: "98%満足度"
+    customizable: ["高さ", "ベースサイズ", "脚部形状", "重量バランス"],
+    leadTime: "2-3週間",
+    badge: "コンパクト"
   },
   {
     id: 4,
-    name: "天井用アイアンバー【E字型】",
-    description: "幅1500mm-高400mm-太タイプ・マットブラック仕上げ・室内物干し対応・100mm刻みオーダー可能",
-    category: "インテリア",
+    name: "Xデザインテーブル脚",
+    description: "クロスデザインのX型アイアンテーブル脚・2脚セット・ダイニングテーブル用・スタイリッシュデザイン",
+    category: "テーブル脚",
     features: [
-      "日本製・受注生産",
-      "100mm刻みサイズオーダー",
-      "マットブラック仕上げ"
+      "スタイリッシュX型構造",
+      "高い安定性",
+      "ダイニングテーブル対応"
     ],
     images: [
-      "/images/products/iron-bar/main.jpg",
-      "/images/products/iron-bar/installation.jpg",
-      "/images/products/iron-bar/size-chart.jpg"
+      "/images/products/iron-bar/61Q3qNU5gXL._SL1500_.jpg",
+      "/images/products/iron-bar/711lmZZhCcL._SL1500_.jpg",
+      "/images/products/iron-bar/71E2M3htchL._SL1500_.jpg",
+      "/images/products/iron-bar/81g22INtVAL._SL1500_.jpg"
     ], 
-    customizable: ["幅サイズ", "高さ", "太さタイプ", "カラー仕上げ"],
-    leadTime: "2-3週間",
-    badge: "日本製"
+    customizable: ["高さ", "X角度", "脚幅", "表面処理"],
+    leadTime: "3-4週間",
+    badge: "人気"
   }
 ]
 
