@@ -110,20 +110,17 @@ const GalleryItem = React.memo<GalleryItemProps>(({
           <div className="absolute inset-0 bg-gray-200 animate-pulse" />
         )}
         
-        <Image
+        {/* SVG画像用の直接表示（Next.js Imageの互換性問題回避） */}
+        <img
           src={item.image}
           alt={item.alt}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          quality={100}
           className={cn(
-            'object-cover transition-all duration-700',
+            'w-full h-full object-cover transition-all duration-700',
             'group-hover:scale-110 group-hover:brightness-110 group-hover:contrast-110',
             imageLoaded ? 'opacity-100' : 'opacity-0'
           )}
           onLoad={() => setImageLoaded(true)}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+          loading="lazy"
         />
         
         {/* Overlay */}

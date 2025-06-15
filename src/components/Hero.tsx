@@ -41,20 +41,15 @@ const Hero = () => {
     >
       {/* Enhanced background with parallax effect */}
       <div className="absolute inset-0 z-0">
-        <Image
+        {/* SVG背景画像の直接表示（Next.js Image互換性問題回避） */}
+        <img
           src="/images/hero.jpg"
           alt="アイアンショップ - 職人の技が光る高品質アイアン製品"
-          fill
-          className="object-cover transform scale-110 transition-transform duration-700"
+          className="absolute inset-0 w-full h-full object-cover transform scale-110 transition-transform duration-700"
           style={{ 
             filter: 'brightness(0.2) contrast(1.3) saturate(0.8) blur(0.5px)',
             transform: 'scale(1.1)'
           }}
-          priority
-          quality={100}
-          sizes="100vw"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
       </div>
 
