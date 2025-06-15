@@ -50,46 +50,57 @@ const Hero = () => {
           style={{ 
             filter: 'brightness(1.6) contrast(2.2) saturate(1.5) drop-shadow(0 4px 20px rgba(0,0,0,0.6))',
             boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2)',
-            opacity: 1,
+            opacity: 0.7,
             zIndex: 5,
-            transform: 'scale(0.85)',
           }}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
           {/* Fallback for browsers that don't support video */}
         </video>
         
-        {/* Fallback background for when video fails to load */}
+        {/* 美しい背景パターン */}
         <div 
           className="absolute inset-0 w-full h-full transform scale-110 transition-transform duration-700"
           style={{ 
             background: `
-              linear-gradient(45deg, #2a2a2a 25%, transparent 25%), 
-              linear-gradient(-45deg, #2a2a2a 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, #2a2a2a 75%), 
-              linear-gradient(-45deg, transparent 75%, #2a2a2a 75%)
+              linear-gradient(45deg, #3a3a3a 25%, transparent 25%), 
+              linear-gradient(-45deg, #3a3a3a 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #3a3a3a 75%), 
+              linear-gradient(-45deg, transparent 75%, #3a3a3a 75%)
             `,
             backgroundSize: '60px 60px',
             backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px',
-            opacity: 0.05,
+            opacity: 0.6,
             zIndex: 1
           }}
         />
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            background: 'radial-gradient(circle at center, rgba(120, 80, 60, 0.05) 0%, rgba(40, 40, 40, 0.2) 100%)',
-            filter: 'blur(2px)',
+            background: 'radial-gradient(circle at center, rgba(139, 69, 19, 0.4) 0%, rgba(20, 20, 20, 0.8) 100%)',
+            filter: 'blur(1px)',
             zIndex: 2
+          }}
+        />
+        
+        {/* アイアンテクスチャ風の追加レイヤー */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{ 
+            background: `
+              linear-gradient(90deg, transparent 0%, rgba(160, 82, 45, 0.1) 50%, transparent 100%),
+              linear-gradient(0deg, transparent 0%, rgba(101, 67, 33, 0.1) 50%, transparent 100%)
+            `,
+            zIndex: 3
           }}
         />
       </div>
 
 
-      {/* 極軽量オーバーレイ */}
+      {/* 軽量オーバーレイ */}
       <div className="absolute inset-0 z-10">
-        <div className="absolute inset-0 bg-black/3" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
       </div>
       
       {/* Main content with enhanced animations */}
