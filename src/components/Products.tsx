@@ -192,8 +192,8 @@ const Products = () => {
                 
 
 
-                {/* 商品画像 - モバイル対応拡大 */}
-                <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 overflow-hidden rounded-t-lg">
+                {/* 商品画像 - サイズ縮小 */}
+                <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden rounded-t-lg">
                   <ImageSlider 
                     images={product.images}
                     alt={product.name}
