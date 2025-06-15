@@ -1,13 +1,12 @@
-# Example Portfolio Deployment Guide
+# Example Deployment Guide
 
-This is a sample/example version of the Iron Works website for portfolio purposes.
+This is a sample/example version of the Iron Works website.
 
 ## Important Notes
 
-🚨 **This is a sample portfolio site with example data only**
-- All contact information is fictional for demonstration purposes
-- Company details are example data only  
-- Not intended for actual business use
+🚨 **This is a sample site with example data**
+- Contact information is fictional
+- Company details are example data
 
 ## Environment Setup
 
@@ -19,7 +18,7 @@ cp .env.example .env.local
 2. Update the environment variables with your example domain:
 ```env
 NEXT_PUBLIC_SITE_URL=https://your-example-domain.vercel.app
-NEXT_PUBLIC_SITE_NAME="Your Portfolio Example"
+NEXT_PUBLIC_SITE_NAME="Your Example Site"
 ```
 
 ## Deployment Steps
@@ -99,4 +98,4 @@ All data in this example site is fictional:
 
 ---
 
-**Created for portfolio demonstration purposes**
+**Sample site for demonstration**

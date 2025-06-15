@@ -189,7 +189,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-slate-400 text-sm">
-                &copy; {currentYear} Vintage Iron Works Example - Portfolio Site All Rights Reserved.
+                &copy; {currentYear} Vintage Iron Works Example All Rights Reserved.
               </p>
               <div className="flex items-center space-x-4 text-xs">
                 <a href="/privacy" className="text-slate-400 hover:text-white transition-colors">

@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: 'アイアンショップ Example',
-  description: '職人の技が光る、こだわりのアイアン製品をお届けします（サンプルサイト）',
+  description: '職人の技が光る、こだわりのアイアン製品をお届けします',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://iron-shop-nextjs-example.vercel.app',
   ogImage: '/images/hero.jpg',
   contact: {
@@ -15,9 +15,9 @@ export const SITE_CONFIG = {
 } as const
 
 export const SEO_DEFAULTS = {
-  title: 'アイアンショップ Example - 高品質なアイアン製品（サンプル）',
-  description: '職人の技が光る、こだわりのアイアン製品をお届けします。アンティーク調からモダンまで、幅広いデザインをご提供。※これはサンプルサイトです。',
-  keywords: 'アイアン,鉄製品,インテリア,家具,アンティーク,インダストリアル,鉄工所,オーダーメイド,サンプル,ポートフォリオ',
+  title: 'アイアンショップ Example - 高品質なアイアン製品',
+  description: '職人の技が光る、こだわりのアイアン製品をお届けします。アンティーク調からモダンまで、幅広いデザインをご提供。',
+  keywords: 'アイアン,鉄製品,インテリア,家具,アンティーク,インダストリアル,鉄工所,オーダーメイド',
   openGraph: {
     type: 'website',
     locale: 'ja_JP',

@@ -17,7 +17,6 @@ const CompanyInfo = () => {
               </h1>
               <p className="text-gray-600">
                 Vintage Iron Works Exampleの会社情報と特定商取引法に基づく表記をご確認ください。
-                <span className="text-red-600 font-medium">※これはポートフォリオ用のサンプル情報です</span>
               </p>
             </div>
 
@@ -298,10 +297,9 @@ const CompanyInfo = () => {
                     <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="font-bold text-red-800 text-lg mb-2">重要なお知らせ</h3>
+                    <h3 className="font-bold text-red-800 text-lg mb-2">ご注意</h3>
                     <p className="text-red-700">
-                      このページに記載されているすべての情報は、<strong>ポートフォリオ展示用のサンプルデータ</strong>です。
-                      実在の会社、人物、住所、連絡先ではありません。実際のビジネスには使用できません。
+                      このページはサンプルサイトです。記載されている会社名、人物名、住所、連絡先等は架空のものです。
                     </p>
                   </div>
                 </div>

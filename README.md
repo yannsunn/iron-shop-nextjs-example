@@ -1,11 +1,11 @@
-# Vintage Iron Works Example - ポートフォリオサイト
+# Vintage Iron Works Example
 
 ![Next.js](https://img.shields.io/badge/Next.js-14.2.5-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-06B6D4)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-🔧 高品質なアイアン製品を扱う架空の企業のウェブサイト（ポートフォリオ展示用）
+🔧 高品質なアイアン製品を扱うウェブサイト
 
 ## 🌟 デモサイト
 
@@ -13,10 +13,8 @@
 
 ## ⚠️ 重要な注意事項
 
-**これはポートフォリオ展示用のサンプルサイトです。**
-- すべての会社情報、連絡先、製品情報は架空のものです
-- 実際のサービス提供は行っておりません
-- 技術デモンストレーションを目的としています
+**これはサンプルサイトです。**
+- 会社情報、連絡先等は架空のものです
 
 ## 🚀 技術スタック
 
@@ -156,9 +154,8 @@ CNAME: iron-shop-example.yourdomain.com -> cname.vercel-dns.com
 
 ## 👨‍💻 作成者
 
-- ポートフォリオ用サンプルサイト
-- 技術デモンストレーション目的
+- サンプルサイト
 
 ---
 
-**注意:** これはポートフォリオ展示用のサンプルサイトです。実際のビジネスには使用しないでください。
+**注意:** これはサンプルサイトです。

@@ -93,7 +93,7 @@ const Header = () => {
                 'text-xs font-medium transition-colors duration-300',
                 isScrolled ? 'text-slate-500' : 'text-white/80'
               )}>
-                ヴィンテージアイアン製品（サンプル）
+                ヴィンテージアイアン製品
               </p>
             </div>
           </div>

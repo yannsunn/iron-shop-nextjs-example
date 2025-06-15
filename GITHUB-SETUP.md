@@ -6,7 +6,7 @@
 2. 右上の「+」アイコンから「New repository」を選択
 3. 以下の設定で作成：
    - **Repository name:** `iron-shop-nextjs-example`
-   - **Description:** `ポートフォリオ展示用 - 高品質なアイアン製品を扱う架空企業のウェブサイト (Next.js + TypeScript)`
+   - **Description:** `高品質なアイアン製品を扱うウェブサイト (Next.js + TypeScript) - サンプル`
    - **Public** を選択
    - **Initialize this repository** のチェックは外す（既存のコードがあるため）
 
