@@ -52,6 +52,7 @@ const Hero = () => {
             boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2)',
             opacity: 1,
             zIndex: 5,
+            transform: 'scale(0.85)',
           }}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
@@ -63,21 +64,21 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full transform scale-110 transition-transform duration-700"
           style={{ 
             background: `
-              linear-gradient(45deg, #4a4a4a 25%, transparent 25%), 
-              linear-gradient(-45deg, #4a4a4a 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, #4a4a4a 75%), 
-              linear-gradient(-45deg, transparent 75%, #4a4a4a 75%)
+              linear-gradient(45deg, #2a2a2a 25%, transparent 25%), 
+              linear-gradient(-45deg, #2a2a2a 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #2a2a2a 75%), 
+              linear-gradient(-45deg, transparent 75%, #2a2a2a 75%)
             `,
             backgroundSize: '60px 60px',
             backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px',
-            opacity: 0.1,
+            opacity: 0.05,
             zIndex: 1
           }}
         />
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            background: 'radial-gradient(circle at center, rgba(200, 122, 85, 0.1) 0%, rgba(60, 60, 60, 0.4) 100%)',
+            background: 'radial-gradient(circle at center, rgba(120, 80, 60, 0.05) 0%, rgba(40, 40, 40, 0.2) 100%)',
             filter: 'blur(2px)',
             zIndex: 2
           }}
@@ -87,8 +88,8 @@ const Hero = () => {
 
       {/* 極軽量オーバーレイ */}
       <div className="absolute inset-0 z-10">
-        <div className="absolute inset-0 bg-black/5" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/3" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
       </div>
       
       {/* Main content with enhanced animations */}
