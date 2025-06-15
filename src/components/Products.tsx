@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import Button from './ui/Button'
 import Card from './ui/Card'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
+import ImageSlider from './ui/ImageSlider'
 
 interface Product {
   id: number
@@ -13,7 +14,7 @@ interface Product {
   description: string
   category: string
   features: string[]
-  image: string
+  images: string[]
   customizable: string[]
   leadTime: string
   badge?: string
@@ -30,7 +31,7 @@ const products: Product[] = [
       "5段調整可能",
       "高品質ワイヤーシェルフ"
     ],
-    image: "/images/product1.jpg",
+    images: ["/images/product1.jpg"],
     customizable: ["サイズ", "段数", "メッキ仕上げ", "耐荷重"],
     leadTime: "3-4週間",
     badge: "98%満足度"
@@ -45,7 +46,7 @@ const products: Product[] = [
       "焚き火対応設計",
       "アウトドア専用"
     ],
-    image: "/images/product2.jpg",
+    images: ["/images/product2.jpg"],
     customizable: ["サイズ", "プレート厚み", "脚部デザイン", "収納機能"],
     leadTime: "4-5週間",
     badge: "98%満足度"
@@ -60,7 +61,7 @@ const products: Product[] = [
       "コンパクト収納",
       "グリル機能付き"
     ],
-    image: "/images/product3.jpg",
+    images: ["/images/product3.jpg"],
     customizable: ["燃焼システム", "収納サイズ", "グリル面積", "材質"],
     leadTime: "5-6週間",
     badge: "98%満足度"
@@ -75,7 +76,7 @@ const products: Product[] = [
       "100mm刻みサイズオーダー",
       "マットブラック仕上げ"
     ],
-    image: "/images/product4.jpg", 
+    images: ["/images/product4.jpg"], 
     customizable: ["幅サイズ", "高さ", "太さタイプ", "カラー仕上げ"],
     leadTime: "2-3週間",
     badge: "日本製"
@@ -90,7 +91,7 @@ const products: Product[] = [
       "スチール製高耐久",
       "モダンブラック仕上げ"
     ],
-    image: "/images/product5.jpg",
+    images: ["/images/product5.jpg"],
     customizable: ["取付方法", "サイズ", "カラー", "エンドキャップ"],
     leadTime: "2-3週間",
     badge: "人気"
@@ -105,25 +106,30 @@ const products: Product[] = [
       "DIY取付簡単",
       "高品質アイアン製"
     ],
-    image: "/images/product6.jpg",
+    images: ["/images/product6.jpg"],
     customizable: ["高さ", "脚幅", "プレート形状", "仕上げ色"],
     leadTime: "3-4週間",
     badge: "DIY向け"
   },
   {
     id: 7,
-    name: "口型アイアンレッグ",
-    description: "高さ40cm×奥行36cm・2本セット・アジャスター付属・ダイニング/デスク用テーブル脚",
-    category: "DIYパーツ",
+    name: "堅牢T型アイアンレッグ - DIYテーブルの真髄",
+    description: "DIYテーブル製作に最適な堅牢なT型アイアンレッグ。プロフェッショナルな仕上がりと安定性を提供します。",
+    category: "テーブル脚",
     features: [
-      "高さ調整アジャスター付",
-      "口型安定構造",
-      "幅広い用途対応"
+      "高耐久性アイアン素材",
+      "簡単な取り付け（天板固定用ネジ穴付き）",
+      "モダンなT字デザイン",
+      "床への傷を防ぐアジャスター付き"
     ],
-    image: "/images/product1.jpg",
-    customizable: ["高さ", "奥行き", "天板取付穴", "表面処理"],
-    leadTime: "3-4週間",
-    badge: "ベストセラー"
+    images: [
+      "/images/table_leg_size.jpg",
+      "/images/table_leg_pair.jpg",
+      "/images/table_leg_with_top.jpg",
+      "/images/table_leg_screw_holes.jpg"
+    ],
+    customizable: ["高さ", "幅", "色", "表面仕上げ"],
+    leadTime: "2-3週間"
   }
 ]
 
@@ -193,16 +199,13 @@ const Products = () => {
 
                 {/* 商品画像 */}
                 <div className="relative h-80 overflow-hidden">
-                  <Image
-                    src={product.image}
+                  <ImageSlider 
+                    images={product.images}
                     alt={product.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className={cn(
-                      "object-cover transition-transform duration-700",
+                      "w-full h-full object-cover transition-transform duration-700",
                       hoveredProduct === product.id && "scale-110"
                     )}
-                    priority={index < 3}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
@@ -259,23 +262,15 @@ const Products = () => {
                     </div>
                   </div>
 
-                  {/* アクションボタン */}
-                  <div className="pt-4 flex gap-2">
-                    <Button
-                      variant="outline"
-                      size="md"
-                      className="flex-1"
-                      onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    >
-                      詳細を見る →
-                    </Button>
+                  {/* お問い合わせボタン */}
+                  <div className="pt-4">
                     <Button
                       variant="primary"
                       size="md"
-                      className="flex-1"
+                      className="w-full"
                       onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                     >
-                      オーダー相談
+                      制作のご相談
                     </Button>
                   </div>
                 </div>

@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 const buttonVariants = {
   variant: {
     default: 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl',
+    primary: 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl',
     secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
     outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white',
     ghost: 'text-gray-700 hover:bg-gray-100',
@@ -12,6 +13,7 @@ const buttonVariants = {
   },
   size: {
     sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
     default: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg',
     xl: 'px-12 py-5 text-xl',

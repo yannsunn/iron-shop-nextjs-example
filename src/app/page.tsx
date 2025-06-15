@@ -12,7 +12,9 @@ export default function HomePage() {
   return (
     <>
       <StructuredData />
-      <NeuroOptimizer />
+      <NeuroOptimizer>
+        <div className="hidden" />
+      </NeuroOptimizer>
       <Header />
       <main>
         <Hero />
