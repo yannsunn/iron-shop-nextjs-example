@@ -58,15 +58,15 @@ const Hero = () => {
           {/* Fallback for browsers that don't support video */}
         </video>
         
-        {/* 美しい背景パターン */}
+        {/* 深いブルー系背景パターン */}
         <div 
           className="absolute inset-0 w-full h-full transform scale-110 transition-transform duration-700"
           style={{ 
             background: `
-              linear-gradient(45deg, #3a3a3a 25%, transparent 25%), 
-              linear-gradient(-45deg, #3a3a3a 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, #3a3a3a 75%), 
-              linear-gradient(-45deg, transparent 75%, #3a3a3a 75%)
+              linear-gradient(45deg, #1a2332 25%, transparent 25%), 
+              linear-gradient(-45deg, #1a2332 25%, transparent 25%), 
+              linear-gradient(45deg, transparent 75%, #1a2332 75%), 
+              linear-gradient(-45deg, transparent 75%, #1a2332 75%)
             `,
             backgroundSize: '60px 60px',
             backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px',
@@ -77,19 +77,19 @@ const Hero = () => {
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            background: 'radial-gradient(circle at center, rgba(139, 69, 19, 0.4) 0%, rgba(20, 20, 20, 0.8) 100%)',
+            background: 'radial-gradient(circle at center, rgba(45, 82, 139, 0.4) 0%, rgba(10, 15, 25, 0.8) 100%)',
             filter: 'blur(1px)',
             zIndex: 2
           }}
         />
         
-        {/* アイアンテクスチャ風の追加レイヤー */}
+        {/* クールトーンの追加レイヤー */}
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
             background: `
-              linear-gradient(90deg, transparent 0%, rgba(160, 82, 45, 0.1) 50%, transparent 100%),
-              linear-gradient(0deg, transparent 0%, rgba(101, 67, 33, 0.1) 50%, transparent 100%)
+              linear-gradient(90deg, transparent 0%, rgba(82, 130, 160, 0.1) 50%, transparent 100%),
+              linear-gradient(0deg, transparent 0%, rgba(33, 67, 101, 0.1) 50%, transparent 100%)
             `,
             zIndex: 3
           }}
