@@ -85,13 +85,13 @@ const Header = () => {
                 'text-2xl font-bold transition-colors duration-300',
                 isScrolled ? 'text-slate-900' : 'text-white'
               )}>
-                アイアンショップ
+                Vintage Iron Works
               </h1>
               <p className={cn(
                 'text-xs font-medium transition-colors duration-300',
                 isScrolled ? 'text-slate-500' : 'text-white/80'
               )}>
-                Iron Workshop
+                ヴィンテージアイアン製品
               </p>
             </div>
           </div>

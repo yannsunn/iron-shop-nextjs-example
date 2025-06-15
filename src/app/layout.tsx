@@ -3,21 +3,21 @@ import './globals.css'
 import SecurityFeatures from '@/components/SecurityFeatures'
 
 export const metadata: Metadata = {
-  title: 'アイアンショップ - 高品質なアイアン製品',
-  description: '職人の技が光る、こだわりのアイアン製品をお届けします。アンティーク調からモダンまで、幅広いデザインをご提供。',
-  keywords: 'アイアン,鉄製品,インテリア,家具,アンティーク,インダストリアル,鉄工所,オーダーメイド',
-  authors: [{ name: 'アイアンショップ' }],
+  title: 'Vintage Iron Works - ヴィンテージアイアン製品',
+  description: '溶接歴40年のパートナーとの協業で生み出す、ヴィンテージ風アイアン製品。オーダーメイドの美しさと品質をお届けします。',
+  keywords: 'ヴィンテージ,アイアン,鉄製品,インテリア,家具,アンティーク,インダストリアル,オーダーメイド,溶接',
+  authors: [{ name: 'Vintage Iron Works' }],
   openGraph: {
-    title: 'アイアンショップ - 高品質なアイアン製品',
-    description: '職人の技が光る、こだわりのアイアン製品をお届けします。',
+    title: 'Vintage Iron Works - ヴィンテージアイアン製品',
+    description: '溶接歴40年のパートナーとの協業で生み出す、ヴィンテージ風アイアン製品。',
     type: 'website',
     locale: 'ja_JP',
-    siteName: 'アイアンショップ',
+    siteName: 'Vintage Iron Works',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'アイアンショップ - 高品質なアイアン製品',
-    description: '職人の技が光る、こだわりのアイアン製品をお届けします。',
+    title: 'Vintage Iron Works - ヴィンテージアイアン製品',
+    description: '溶接歴40年のパートナーとの協業で生み出す、ヴィンテージ風アイアン製品。',
   },
   robots: {
     index: true,
