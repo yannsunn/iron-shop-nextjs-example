@@ -99,64 +99,6 @@ const products: Product[] = [
     customizable: ["幅サイズ", "高さ", "太さタイプ", "カラー仕上げ"],
     leadTime: "2-3週間",
     badge: "日本製"
-  },
-  {
-    id: 5,
-    name: "SQハンガーバー",
-    description: "幅120cm×高さ23cm・マットブラック・天井/壁取付対応・スチール製ハンギングバー",
-    category: "インテリア",
-    features: [
-      "天井/壁両用設計",
-      "スチール製高耐久",
-      "モダンブラック仕上げ"
-    ],
-    images: [
-      "/images/products/hanger-bar/main.jpg",
-      "/images/products/hanger-bar/wall-mount.jpg",
-      "/images/products/hanger-bar/ceiling-mount.jpg"
-    ],
-    customizable: ["取付方法", "サイズ", "カラー", "エンドキャップ"],
-    leadTime: "2-3週間",
-    badge: "人気"
-  },
-  {
-    id: 6,
-    name: "T型アイアンテーブル脚",
-    description: "高さ67.5cm・2脚1組セット・マットブラック仕上げ・DIY家具用アイアンレッグ",
-    category: "DIYパーツ",
-    features: [
-      "安定のT型構造",
-      "DIY取付簡単",
-      "高品質アイアン製"
-    ],
-    images: [
-      "/images/products/table-legs/main.jpg",
-      "/images/products/table-legs/pair.jpg",
-      "/images/products/table-legs/structure.jpg"
-    ],
-    customizable: ["高さ", "脚幅", "プレート形状", "仕上げ色"],
-    leadTime: "3-4週間",
-    badge: "DIY向け"
-  },
-  {
-    id: 7,
-    name: "堅牢T型アイアンレッグ - DIYテーブルの真髄",
-    description: "DIYテーブル製作に最適な堅牢なT型アイアンレッグ。プロフェッショナルな仕上がりと安定性を提供します。",
-    category: "テーブル脚",
-    features: [
-      "高耐久性アイアン素材",
-      "簡単な取り付け（天板固定用ネジ穴付き）",
-      "モダンなT字デザイン",
-      "床への傷を防ぐアジャスター付き"
-    ],
-    images: [
-      "/images/products/adjustable-legs/main.jpg",
-      "/images/products/adjustable-legs/adjuster.jpg",
-      "/images/products/adjustable-legs/with-table.jpg",
-      "/images/products/adjustable-legs/holes.jpg"
-    ],
-    customizable: ["高さ", "幅", "色", "表面仕上げ"],
-    leadTime: "2-3週間"
   }
 ]
 
