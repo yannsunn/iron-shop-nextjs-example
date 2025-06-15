@@ -40,7 +40,8 @@
       "WebFetch(domain:www.slazzer.com)",
       "Bash(git config:*)",
       "Bash(git lfs:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "WebFetch(domain:www.iris-oyama.co.jp)"
     ],
     "deny": []
   }
