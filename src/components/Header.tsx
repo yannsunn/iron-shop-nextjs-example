@@ -67,10 +67,10 @@ const Header = () => {
   return (
     <>
       <header className={cn(
-        'fixed w-full z-[100] h-20 transition-all duration-300',
+        'fixed w-full top-0 z-[100] h-20 transition-all duration-300',
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200 top-0' 
-          : 'bg-black/60 backdrop-blur-lg shadow-md border-b border-white/10 top-10'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200' 
+          : 'bg-black/60 backdrop-blur-lg shadow-md border-b border-white/10'
       )}>
         <nav className="container-custom flex justify-between items-center h-full px-4 sm:px-6 lg:px-8">
           {/* Logo */}

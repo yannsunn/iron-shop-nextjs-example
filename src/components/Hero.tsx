@@ -37,7 +37,7 @@ const Hero = () => {
       ref={sectionRef}
       id="home" 
       className="relative h-screen text-white overflow-hidden"
-      style={{ paddingTop: '100px' }}
+      style={{ paddingTop: '60px' }}
     >
       {/* Video Background */}
       <div className="absolute inset-0 z-0">

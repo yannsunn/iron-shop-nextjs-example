@@ -6,7 +6,6 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import StructuredData from '../components/StructuredData'
 import NeuroOptimizer from '../components/NeuroOptimizer'
-import DisclaimerBanner from '../components/DisclaimerBanner'
 
 export default function HomePage() {
   return (
@@ -15,7 +14,6 @@ export default function HomePage() {
       <NeuroOptimizer>
         <div className="hidden" />
       </NeuroOptimizer>
-      <DisclaimerBanner />
       <Header />
       <main>
         <Hero />
