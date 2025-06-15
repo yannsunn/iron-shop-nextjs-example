@@ -46,12 +46,15 @@ const Hero = () => {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
           style={{ 
             filter: 'brightness(1.6) contrast(2.2) saturate(1.5) drop-shadow(0 4px 20px rgba(0,0,0,0.6))',
             boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2)',
             opacity: 1,
             zIndex: 5,
+            width: '60%',
+            height: '60%',
+            borderRadius: '12px',
           }}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
@@ -77,9 +80,21 @@ const Hero = () => {
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            background: 'radial-gradient(circle at center, rgba(200, 122, 85, 0.1) 0%, rgba(60, 60, 60, 0.4) 100%)',
+            background: 'radial-gradient(circle at center, rgba(200, 122, 85, 0.15) 0%, rgba(60, 60, 60, 0.5) 100%)',
             filter: 'blur(2px)',
             zIndex: 2
+          }}
+        />
+        
+        {/* 動画周辺のソフトグラデーション */}
+        <div 
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          style={{ 
+            width: '80%',
+            height: '80%',
+            background: 'radial-gradient(circle, transparent 40%, rgba(0,0,0,0.3) 100%)',
+            borderRadius: '20px',
+            zIndex: 3
           }}
         />
       </div>
